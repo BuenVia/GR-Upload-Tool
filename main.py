@@ -1,13 +1,11 @@
 import pandas as pd
-import os
-import glob
-import re
-from datetime import datetime
+import os, glob, re
+from datetime import datetime, date
 from googletrans import Translator
 
 translator = Translator()
 
-""" 
+"""
 First part of the program returns the unformatted csv with the raw data extracted from SalesForce.
 Second part of the program formats the data ready for DataLoader.
 """
@@ -75,7 +73,8 @@ for f in csv_files:
 
 # Create a dataframe from the final dictionary and create CSV
 df = pd.DataFrame(result_dict)
-# df.to_csv(f"unformatted_{datetime.now().strftime('%M_%S')}.csv")
+# df.to_csv(f"EXPORT_VRBO_{datetime.now().strftime('%M_%S')}.csv")
+df.to_csv(f"EXPORT_VRBO_{date.today()}.csv")
 
 #TODO 1. Format the data during the process
 
@@ -112,7 +111,7 @@ for f in csv_files:
     # Merges the Sentence, REVIEW_TITLE and Verbatim columns together to create a description column
     data["Description"] = "SENTENCE: \n" + data["Sentence"] + "\nTITLE: \n" + data["REVIEW_TITLE"] + "\nREVIEW: \n" +data["Verbatim"] + "\nBrand: VRBO"
     data["Translated Description"] = data["Sentence"] + "--------" + data["Verbatim"]
-    
+
     # Push each column to relevant list in dictionary
     for natural in data["NaturalId"]:
         formatted_dict["Review ID"].append(natural)
@@ -183,13 +182,13 @@ for f in csv_files:
     for n in data["NaturalId"]:
         formatted_dict["Record Type ID"].append("Partner Review")
     for n in data["NaturalId"]:
-        formatted_dict["Contact Name"].append("internal contacts")  
+        formatted_dict["Contact Name"].append("internal contacts")
     #Logic for working out owner ID
     for n in data["NaturalId"]:
         if pc[35:] == "Fire" or pc[35:] == "Gas":
             formatted_dict["Owner ID"].append("005C0000003oGdn")
         else:
-            formatted_dict["Owner ID"].append("0058b00000FdW4I")     
+            formatted_dict["Owner ID"].append("0058b00000FdW4I")
     for n in data["NaturalId"]:
         formatted_dict["Case Category"].append("Guest Review")
     #Logic for working out the case type
@@ -221,6 +220,7 @@ for f in csv_files:
     #TODO 2. Logic for working out the translated description
     for trans_desc in data["Translated Description"]:
         formatted_dict["Translated Description"].append("NULL")
-        
+
 mf = pd.DataFrame(formatted_dict)
-mf.to_csv(f"formatted_{datetime.now().strftime('%M_%S')}.csv", index=False, encoding='utf-8-sig')
+# mf.to_csv(f"formatted_{datetime.now().strftime('%M_%S')}.csv", index=False, encoding='utf-8-sig')
+mf.to_csv(f"UPLOAD_VRBO_{date.today()}.csv")
