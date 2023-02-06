@@ -180,21 +180,39 @@ for f in csv_files:
     for n in data["NaturalId"]:
         formatted_dict["Record Type ID"].append("Partner Review")
     for n in data["NaturalId"]:
-        formatted_dict["Contact Name"].append("internal contacts")
-    #TODO 2. Logic for working out owner ID
+        formatted_dict["Contact Name"].append("internal contacts")  
+    #Logic for working out owner ID
     for n in data["NaturalId"]:
-        formatted_dict["Owner ID"].append("NULL")
+        if pc[35:] == "Fire" or pc[35:] == "Gas":
+            formatted_dict["Owner ID"].append("005C0000003oGdn1")
+        else:
+            formatted_dict["Owner ID"].append("0058b00000FdW4I")     
     for n in data["NaturalId"]:
         formatted_dict["Case Category"].append("Guest Review")
-    #TODO 3. Logic for working out the case type
+    #Logic for working out the case type
     for n in data["NaturalId"]:
-        formatted_dict["Type"].append("NULL")
+        if pc[35:] == "Fire" or pc[35:] == "Balcony" or pc[35:] == "Gas":
+            formatted_dict["Type"].append("Health & Safety Investigation Level 1")
+        elif pc[35:] == "Electrical - Power Outage" or pc[35:] == "Electrical - Faulty Equipment" or pc[35:] == "Electrical - Loose or exposed wiring" or pc[35:] == "Electrical - Electric Shocks" or pc[35:] == "Electrical - Broken Sockets":
+            formatted_dict["Type"].append("Health & Safety Investigation Level 3")
+        elif pc[35:] == "Transport/Excursions" or pc[35:] == "Beach Safety":
+            formatted_dict["Type"].append("Health & Safety Investigation Level 3")
+        elif pc[35:] == "Pest-Control - Bed Bugs" or pc[35:] == "Pest-Control - Mice" or pc[35:] == "Pest-Control - Cockroaches" or pc[35:] == "Pest-Control - Use of pesticide":
+            formatted_dict["Type"].append("Health & Safety Investigation Level 3")
+        else:
+            formatted_dict["Type"].append("Health & Safety Investigation Level 2")
     #TODO 4. Logic for working out the status
     for n in data["NaturalId"]:
-        formatted_dict["Status"].append("NULL")
+        if pc[35:] == "Fire" or pc[35:] == "Balcony" or pc[35:] == "Gas":
+            formatted_dict["Status"].append("New")
+        else:
+            formatted_dict["Status"].append("Pending - Internal")
     #TODO 5. Logic for working out the blocker
     for n in data["NaturalId"]:
-        formatted_dict["Blocker"].append("NULL")
+        if pc[35:] == "Fire" or pc[35:] == "Balcony" or pc[35:] == "Gas":
+            formatted_dict["Blocker"].append("")
+        else:
+            formatted_dict["Blocker"].append("Awaiting Internal Team")
     for n in data["NaturalId"]:
         formatted_dict["Auto Chase Status"].append("Not Applicable")
     #TODO 6. Logic for working out the translated description
