@@ -3,6 +3,9 @@ import os
 import glob
 import re
 from datetime import datetime
+from googletrans import Translator
+
+translator = Translator()
 
 """ 
 First part of the program returns the unformatted csv with the raw data extracted from SalesForce.
@@ -95,7 +98,6 @@ formatted_dict = {
     "Blocker": [],
     "Auto Chase Status": [],
     "Translated Description": []
-
 }
 
 # For each file, extract all information from row 14 onwards
@@ -109,7 +111,8 @@ for f in csv_files:
 
     # Merges the Sentence, REVIEW_TITLE and Verbatim columns together to create a description column
     data["Description"] = "SENTENCE: \n" + data["Sentence"] + "\nTITLE: \n" + data["REVIEW_TITLE"] + "\nREVIEW: \n" +data["Verbatim"] + "\nBrand: VRBO"
-
+    data["Translated Description"] = data["Sentence"] + "--------" + data["Verbatim"]
+    
     # Push each column to relevant list in dictionary
     for natural in data["NaturalId"]:
         formatted_dict["Review ID"].append(natural)
@@ -184,7 +187,7 @@ for f in csv_files:
     #Logic for working out owner ID
     for n in data["NaturalId"]:
         if pc[35:] == "Fire" or pc[35:] == "Gas":
-            formatted_dict["Owner ID"].append("005C0000003oGdn1")
+            formatted_dict["Owner ID"].append("005C0000003oGdn")
         else:
             formatted_dict["Owner ID"].append("0058b00000FdW4I")     
     for n in data["NaturalId"]:
@@ -201,13 +204,13 @@ for f in csv_files:
             formatted_dict["Type"].append("Health & Safety Investigation Level 3")
         else:
             formatted_dict["Type"].append("Health & Safety Investigation Level 2")
-    #TODO 4. Logic for working out the status
+    #Logic for working out the status
     for n in data["NaturalId"]:
         if pc[35:] == "Fire" or pc[35:] == "Balcony" or pc[35:] == "Gas":
             formatted_dict["Status"].append("New")
         else:
             formatted_dict["Status"].append("Pending - Internal")
-    #TODO 5. Logic for working out the blocker
+    #Logic for working out the blocker
     for n in data["NaturalId"]:
         if pc[35:] == "Fire" or pc[35:] == "Balcony" or pc[35:] == "Gas":
             formatted_dict["Blocker"].append("")
@@ -215,9 +218,9 @@ for f in csv_files:
             formatted_dict["Blocker"].append("Awaiting Internal Team")
     for n in data["NaturalId"]:
         formatted_dict["Auto Chase Status"].append("Not Applicable")
-    #TODO 6. Logic for working out the translated description
-    for n in data["NaturalId"]:
+    #TODO 2. Logic for working out the translated description
+    for trans_desc in data["Translated Description"]:
         formatted_dict["Translated Description"].append("NULL")
-
+        
 mf = pd.DataFrame(formatted_dict)
-mf.to_csv(f"formatted_{datetime.now().strftime('%M_%S')}.csv", index=False)
+mf.to_csv(f"formatted_{datetime.now().strftime('%M_%S')}.csv", index=False, encoding='utf-8-sig')
