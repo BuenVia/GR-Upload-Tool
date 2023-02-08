@@ -1,7 +1,10 @@
 import os, glob, re
 import pandas as pd
 from datetime import datetime, date as dt
+from googletrans import Translator
 from categories import cat_dict as cat
+
+trans = Translator()
 
 def date_format(od):
     date_str = re.search(r"\d{2}/\d{2}/\d{4}", od)
@@ -24,19 +27,27 @@ def test_merge():
         new_item = pd.read_csv(f, skiprows=13)
         data = pd.DataFrame(new_item)
         
-        # Creates list with topic - count of number of DF rows
-        topic = []
-        for _ in range(len(data)):
-            topic.append(pc[35:])
-        
+        data["Topic"] = pc[35:]
         # Creates topic column in DF using the topic list above
-        data["Primary Category"] = [cat[t]["primCat"] for t in topic]
-        data["Secondary Category"] = [cat[t]["secCat"] for t in topic]
+        data["Primary Category"] = [cat[t]["primCat"] for t in data["Topic"]]
+        data["Secondary Category"] = [cat[t]["secCat"] for t in data["Topic"]]
         # Creates a a new column called Description in the DF which is a merge of the Sentence, Review Title and Verbatim
         data["Description"] = "SENTENCE: \n" + data["Sentence"] + "\nTITLE: \n" + data["REVIEW_TITLE"] + "\nREVIEW: \n" +data["Verbatim"] + "\nBrand: VRBO"
-        # Creates a new column for the Validated Listing ID
+        # Creates a new column for columns that don't exist from the export
         data["Validated Listing ID"] = data["ADM_EXPEDIAHOTELID"]
         data["Case Origin"] = "Dataloader"
+        data["Record Type ID"] = "Partner Review"
+        data["Contact Name"] = "Internal Contacts"
+        data["Case Category"] = "Guest Review"
+        # Work out the case type based on the data["Primary Category"]
+        data["Type"] = ["Health & Safety Investigation Level 1" if cat == "Fire" or cat == "Balcon" or cat == "Gas" else "Health & Safety Investigation Level 3" if  cat == "Electrical" or  cat == "Pest-Control" or cat == "Beach Safety" or cat == "Transport" else "Health & Safety Investigation Level 2" for cat in data["Primary Category"]]
+        data["Owner ID"] = ["005C0000003oGdn" if primCat == "Fire" or primCat == "Gas" else "0058b00000FdW4I" for primCat in data["Primary Category"]]
+        data["Status"] = ["New" if primCat == "Fire" or primCat == "Gas" else "Pending - Vendor" for primCat in data["Primary Category"]]
+        data["Blocker"] = ["" if primCat == "Fire" or primCat == "Gas" else "Awaiting Response" for primCat in data["Primary Category"]]
+        data["Auto Chase Status"] = "Not Applicable"
+        
+        # tr = trans.translate("Hola, buenas tardes.")
+        # print(tr.text)
                
         dfs.append(data)
     
@@ -46,6 +57,8 @@ def test_merge():
     # Format the columns
     master_df["Document Date"] = [date_format(date) for date in master_df["Document Date"]]
     master_df["Sentence"] = [sentence[:250] for sentence in master_df["Sentence"]]
+    #TODO 1 - TRANSLATIONS
+    master_df["Translated Description"] = "A"
     
     # Rename the columns
     master_df = master_df.rename(columns={
@@ -65,7 +78,16 @@ def test_merge():
          "Primary Category",
          "Secondary Category",
          "Description",
-         "Case Origin"
+         "Case Origin",
+         "Record Type ID",
+         "Contact Name",
+         "Owner ID",
+         "Case Category",
+         "Type",
+         "Status",
+         "Blocker",
+         "Auto Chase Status",
+         "Translated Description"
          ]
     ]
     

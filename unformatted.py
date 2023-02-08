@@ -15,17 +15,14 @@ def create_vrbo_unformatted():
         messagebox.showinfo(title="Error", message="No files found in the './exports/vrbo_exports' directory.")
     else:
         for f in csv_files:
+            # Finds the topic in row 8
             pc_item = pd.read_csv(f, nrows=8)
             pc = pc_item.iat[7,0]
-            
+            # Pulls all data from line 14 onwards
             x = pd.read_csv(f, skiprows=13)
             new_data = pd.DataFrame(x)
-            
-            topic = []
-            for _ in range(len(new_data)):
-                topic.append(pc[35:])
                 
-            new_data["Topic"] = topic
+            new_data["Topic"] = pc[35:]
             
             dfs.append(new_data)
             
