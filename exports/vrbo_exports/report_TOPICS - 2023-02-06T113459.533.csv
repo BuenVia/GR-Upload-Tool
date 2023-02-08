@@ -1,0 +1,36 @@
+﻿"Topic = ""H&S VRBO Model - REF"">>Topic = ""Beach Safety"""
+Date exported: 06/02/23
+Exported by user: mclifford@expediagroup.com
+Classification: H&S VRBO Model - REF
+Report type: Topics Volume Report
+Project: Expedia
+Date range: from 22/01/23 to 06/02/23
+Date filter: 23/01/2023 - 06/02/2023
+Topic path: H&S VRBO Model - REF-->Beach Safety
+Sentiment Filter: All sentences
+Matched: 2 sentences
+"Beach Safety Rule #1: [ LEVEL:SENTENCE TYPE:KEYWORD {_catRef:[model:""H&S VRBO Model - Dutch"" path:""root"" node:""Beach Safety""], _catRef:[model:""H&S VRBO Model - English"" path:""root"" node:""Beach Safety""], _catRef:[model:""H&S VRBO Model - French"" path:""root"" node:""Beach Safety""], _catRef:[model:""H&S VRBO Model - German"" path:""root"" node:""Beach Safety""], _catRef:[model:""H&S VRBO Model - Italian"" path:""root"" node:""Beach Safety""], _catRef:[model:""H&S VRBO Model - Japanese"" path:""root"" node:""Beach Safety""], _catRef:[model:""H&S VRBO Model - Portuguese"" path:""root"" node:""Beach Safety""], _catRef:[model:""H&S VRBO Model - Portuguese (Brazil)"" path:""root"" node:""Beach Safety""], _catRef:[model:""H&S VRBO Model - Swedish"" path:""root"" node:""Beach Safety""], _catRef:[model:""H&S VRBO Model - Spanish"" path:""root"" node:""Beach Safety""], _catRef:[model:""H&S VRBO Model - Danish"" path:""root"" node:""Beach Safety""], }]"
+"H&S VRBO Model - REF Rule #2: [ LEVEL:SENTENCE TYPE:KEYWORD {HR_TSPID:""83""}] [ LEVEL:SENTENCE TYPE:AND_KEYWORD {_language:dutch, _language:english, _language:french, _language:german, _language:italian, _language:japanese, _language:portuguese, _language:portuguese(brazil), _language:spanish, _language:swedish, _language:danish, _languagedetected:danish, _language:""greek (modern)""}]"
+NaturalId,SentenceId,Source,ADM_EXPEDIAHOTELID,CB Date of Creation,Document Date,HA_HOTELNAME,HR_DISPLAYLOCALE,HR_TSPID,REVIEW_TITLE,Sentence,VerbatimType,Verbatim
+63de487639757b125bcff274,8181316766,NOT SPECIFIED,33580003,1675511936341,04/02/2023 11:58:46 CST,19th century cottage a few steps from the beach,en_us,83,beautiful location,The beach down the slip is private,HR_REVIEWTEXT,"When we arrived Jan 20,2023 the house was extremely cold! It took 2 full days before it felt warm, the owner asks that the heat be turned off at night and once the house warmed up we were able to do that easily, the house would warm back up very quickly.
+
+We did find that many items in the house are overdue for replacement. The bath towels were so thin, the coffee & cream containers were rusted inside, we only had 1 dish rag and dish towel, the fitted sheets elastic was basically gone.
+If you go here with the understanding that you need to bring some basic things like bath towels, wash rag or sponge for the the bath and some essentials for the kitchen like extra dish rags, towels, coffee press, paper towels.
+
+The area was wonderful, the only issue is a neighbor on the hill with a Great Dane that he brings down the hill to poop everyday and never cleans it up, it is EVERYWERE!!!
+
+The Cliff walk is amazing, you can walk into town to grab a pint or bite after your cliff walk there and then walk back to the cottage. The beach down the slip is private and relaxing, we took a dip in the sea a couple mornings, so invigorating.
+
+The owner Lina is wonderful and quick to respond to any messages, We would love to come back to this area in the future."
+63d149bfd207d93602d102de,8177355308,NOT SPECIFIED,35114667,1674660296447,25/01/2023 15:24:46 CST,"stylish, newly renovated and upgraded beach house steps from the water",en_us,83,relaxing stay on brewers bay,"130 arrival and hit the Baths... then head to Little Dix Bay around 430 (Rosewood Resort) and rinse off in their outdoor beach shower, change into a sundress and polo with light slacks and loafers (no sandals allowed!)",HR_REVIEWTEXT,"Brewers Bay Beach House is a perfect location for those looking for peace and quiet in a Caribbean Tropical setting. Nestled right on a secluded beach, you may not see another human being during your stay... which is exactly what the doctor ordered for those like us wishing to escape the hustle and bustle of city/suburban life for a little R&R. 
+
+Brewers Bay is one of the least crowded bays on Tortola, and it is beautiful. As the pictures show accurately, it is right on the water... lots of toys and a nice reef to snorkel, right in front of the house. 
+
+Things to do... 
+- we rented a Suzuki Jimney - you WILL need this to access the property as the roads are sketch... we picked it up right at the ferry dock upon our arrival (Island Time Car Rentals)
+- drive to the West End Ferry Dock and catch a 15 min ferry to Jost Van Dyke for 4 hours... rent a Jimney there and take the ""road less travelled"" over the top of the mountains (NOT FOR THE FAINT OF HEART!)... see the ""bubbly pool"" (don't forget your bathing suit)... on Beautiful White Bay take 5 mins to get a Painkiller at the Soggy Dollar (where it was invented) and then leave immediately and go next door to eat at Hendos (a much nicer establishment with better food)
+- We ate at all the best restaurants on the Island... Best of the Best: Marche at Trellis on Beef Island - incredible Poke Bowl and Sushi Rolls! Sugar Mill Hotel - setting to die for. Dragon Fly Lounge for Lunch. French Deli for coffee / pastries / wine / rum / baguette sandwiches. Brandywine Estate - what a view!
+- Drive to Beef Island and take the 20 min ferry ride one day to Virgin Gorda and the Baths... suggest eating at Marche at Trellis at 1130 - right by the ferry dock - take the 100pm to Virgin Gorda... $99 car deal gets you 2 round trip ferry tickets and a rental car for the day... 130 arrival and hit the Baths... then head to Little Dix Bay around 430 (Rosewood Resort) and rinse off in their outdoor beach shower, change into a sundress and polo with light slacks and loafers (no sandals allowed!) have a drink at the RUM Bar, and dine at 6PM at the Reef Restaurant at the resort... then take the 8PM (5 mins away) ferry back to Tortola. Little Dix Bay resort is amazing and worth a visit - grab a bike at the visitor's parking lot!
+- Rent a boat (with or without a skipper) at Island Time an take the 20 min ride to The Indians for the best snorkeling in the VBI
+
+A wonderful VACAY in a magical place!"
