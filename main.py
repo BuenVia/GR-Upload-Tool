@@ -1,8 +1,7 @@
 from tkinter import *
-
+from test import test_merge
 from unformatted import create_vrbo_unformatted
 from formatted import create_vrbo_formatted
-from test import test_merge
 
 """
 First part of the program returns the unformatted csv with the raw data extracted from SalesForce.
@@ -10,8 +9,8 @@ Second part of the program formats the data ready for DataLoader.
 """
 
 def vrbo_format():
-    create_vrbo_formatted()
-    create_vrbo_unformatted()
+    # create_vrbo_formatted()
+    # create_vrbo_unformatted()
     test_merge()
 
 window = Tk()
