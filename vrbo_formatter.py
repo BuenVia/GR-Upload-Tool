@@ -1,23 +1,37 @@
 import os, glob, re
 import pandas as pd
 from datetime import datetime, date as dt
-from googletrans import Translator
 from categories import cat_dict as cat
-
-trans = Translator()
 
 def date_format(od):
     date_str = re.search(r"\d{2}/\d{2}/\d{4}", od)
     res = datetime.strptime(date_str.group(), "%d/%m/%Y").date()
     return (f"{res.strftime('%m/%d/%Y')}T01:00:00.000GMT")
 
-def test_merge():
+def create_vrbo_unformatted(csv_files):
     master_df = pd.DataFrame()
     dfs = []
-    
-    # Pull the data from each file
-    path = os.getcwd()
-    csv_files = glob.glob(os.path.join(path, "./exports/vrbo_exports/*.csv"))
+
+    for f in csv_files:
+        # Finds the topic in row 8
+        pc_item = pd.read_csv(f, nrows=8)
+        pc = pc_item.iat[7,0]
+        # Pulls all data from line 14 onwards
+        x = pd.read_csv(f, skiprows=13)
+        new_data = pd.DataFrame(x)
+            
+        new_data["Topic"] = pc[35:]
+        
+        dfs.append(new_data)
+        
+    master_df = pd.concat(dfs)
+        
+    master_df.to_csv(f"./uploads/VRBO_EXPORT_{dt.today()}.csv", index=False)
+
+def create_vrbo_formatted(csv_files):
+    master_df = pd.DataFrame()
+    dfs = []
+
     for f in csv_files:
         
         # Find string that contains topic name on line 8
@@ -32,7 +46,7 @@ def test_merge():
         data["Primary Category"] = [cat[t]["primCat"] for t in data["Topic"]]
         data["Secondary Category"] = [cat[t]["secCat"] for t in data["Topic"]]
         # Creates a a new column called Description in the DF which is a merge of the Sentence, Review Title and Verbatim
-        data["Description"] = "SENTENCE: \n" + data["Sentence"] + "\nTITLE: \n" + data["REVIEW_TITLE"] + "\nREVIEW: \n" +data["Verbatim"] + "\nBrand: VRBO"
+        data["Description"] = data["Sentence"] + "\n----: \n" + data["REVIEW_TITLE"] + "\n----: \n" +data["Verbatim"] + "\nBrand: VRBO"
         # Creates a new column for columns that don't exist from the export
         data["Validated Listing ID"] = data["ADM_EXPEDIAHOTELID"]
         data["Case Origin"] = "Dataloader"
@@ -45,9 +59,6 @@ def test_merge():
         data["Status"] = ["New" if primCat == "Fire" or primCat == "Gas" else "Pending - Vendor" for primCat in data["Primary Category"]]
         data["Blocker"] = ["" if primCat == "Fire" or primCat == "Gas" else "Awaiting Response" for primCat in data["Primary Category"]]
         data["Auto Chase Status"] = "Not Applicable"
-        
-        # tr = trans.translate("Hola, buenas tardes.")
-        # print(tr.text)
                
         dfs.append(data)
     
@@ -58,8 +69,8 @@ def test_merge():
     master_df["Document Date"] = [date_format(date) for date in master_df["Document Date"]]
     master_df["Sentence"] = [sentence[:250] for sentence in master_df["Sentence"]]
     #TODO 1 - TRANSLATIONS
-    master_df["Translated Description"] = "A"
-    
+    master_df["Translated Description"] = "NULL"
+        
     # Rename the columns
     master_df = master_df.rename(columns={
             "NaturalId": "Review ID",
@@ -91,4 +102,7 @@ def test_merge():
          ]
     ]
     
-    master_df.to_csv(f"./uploads/VRBO_UPLOAD_Test.csv", index=False, encoding='utf-8-sig')
+    # Remove duplicates
+    master_df = master_df.drop_duplicates(subset="Review ID", keep="first")
+        
+    master_df.to_csv(f"./uploads/VRBO_UPLOAD_Test1.csv", index=False, encoding='utf-8-sig')
