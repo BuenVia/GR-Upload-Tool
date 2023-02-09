@@ -1,0 +1,18 @@
+﻿"Topic = ""H&S VRBO Model - REF"">>Topic = ""Pool Safety"""
+Date exported: 09/02/23
+Exported by user: mclifford@expediagroup.com
+Classification: H&S VRBO Model - REF
+Report type: Topics Volume Report
+Project: Expedia
+Date range: from 05/02/23 to 06/02/23
+Date filter: 06/02/2023 - 06/02/2023
+Topic path: H&S VRBO Model - REF-->Pool Safety
+Sentiment Filter: All sentences
+Matched: 2 sentences
+"Pool Safety Rule #1: [ LEVEL:SENTENCE TYPE:KEYWORD {_catRef:[model:""H&S VRBO Model - Dutch"" path:""root"" node:""Pool Safety""], _catRef:[model:""H&S VRBO Model - English"" path:""root"" node:""Pool Safety""], _catRef:[model:""H&S VRBO Model - French"" path:""root"" node:""Pool Safety""], _catRef:[model:""H&S VRBO Model - German"" path:""root"" node:""Pool Safety""], _catRef:[model:""H&S VRBO Model - Italian"" path:""root"" node:""Pool Safety""], _catRef:[model:""H&S VRBO Model - Japanese"" path:""root"" node:""Pool Safety""], _catRef:[model:""H&S VRBO Model - Portuguese"" path:""root"" node:""Pool Safety""], _catRef:[model:""H&S VRBO Model - Portuguese (Brazil)"" path:""root"" node:""Pool Safety""], _catRef:[model:""H&S VRBO Model - Swedish"" path:""root"" node:""Pool Safety""], _catRef:[model:""H&S VRBO Model - Spanish"" path:""root"" node:""Pool Safety""], _catRef:[model:""H&S VRBO Model - Danish"" path:""root"" node:""Pool Safety""], }]"
+"H&S VRBO Model - REF Rule #2: [ LEVEL:SENTENCE TYPE:KEYWORD {HR_TSPID:""83""}] [ LEVEL:SENTENCE TYPE:AND_KEYWORD {_language:dutch, _language:english, _language:french, _language:german, _language:italian, _language:japanese, _language:portuguese, _language:portuguese(brazil), _language:spanish, _language:swedish, _language:danish, _languagedetected:danish, _language:""greek (modern)""}]"
+NaturalId,SentenceId,Source,ADM_EXPEDIAHOTELID,CB Date of Creation,Document Date,HA_HOTELNAME,HR_DISPLAYLOCALE,HR_TSPID,REVIEW_TITLE,Sentence,VerbatimType,Verbatim
+63e06af31979f94105a57a24,8182013066,NOT SPECIFIED,33502441,1675651842867,06/02/2023 02:50:27 CST,beautiful ocean views with pool near the beach - kaanapali beach,en_us,83,home in lahaina,Floor surface near pool can be slippery.,HR_REVIEWTEXT,"Beautiful home.
+Parking for numerous cars can be challenging but it works. Floor surface near pool can be slippery. 
+Having pointed out the only two concerns it was a wonderful place for a big group. Kitchen is great. Our family loves to cook so that was a big plus"
+63e066c6bc6fce68ac65e3f8,8182009898,NOT SPECIFIED,27132236,1675650769532,06/02/2023 02:32:38 CST,"secluded rental cabin on southern illinois wine trail, private hot tub",en_us,83,perfect weekend cabin,"Beautiful property, the hot tub hit the spot on the cold nights.",HR_REVIEWTEXT,"Beautiful property, the hot tub hit the spot on the cold nights."

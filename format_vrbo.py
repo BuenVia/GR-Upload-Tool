@@ -1,13 +1,15 @@
-import os, glob, re
+import re
 import pandas as pd
 from datetime import datetime, date as dt
 from categories import cat_dict as cat
 
+# Function to format the date as per Dataloader/SalesForce requirements
 def date_format(od):
     date_str = re.search(r"\d{2}/\d{2}/\d{4}", od)
     res = datetime.strptime(date_str.group(), "%d/%m/%Y").date()
     return (f"{res.strftime('%m/%d/%Y')}T01:00:00.000GMT")
 
+"""Merges and creates an unformatted csv file of the VRBO data"""
 def create_vrbo_unformatted(csv_files):
     master_df = pd.DataFrame()
     dfs = []
@@ -28,6 +30,7 @@ def create_vrbo_unformatted(csv_files):
         
     master_df.to_csv(f"./uploads/VRBO_EXPORT_{dt.today()}.csv", index=False)
 
+"""Merges and creates a formatted version of the merged VRBO"""
 def create_vrbo_formatted(csv_files):
     master_df = pd.DataFrame()
     dfs = []
@@ -74,7 +77,7 @@ def create_vrbo_formatted(csv_files):
     # Rename the columns
     master_df = master_df.rename(columns={
             "NaturalId": "Review ID",
-            "Document Date": "Review Date Submission Time",
+            "Document Date": "Review Submission Date Time",
             "ADM_EXPEDIAHOTELID": "Account ID",
             "Sentence": "Subject"
         })
@@ -82,7 +85,7 @@ def create_vrbo_formatted(csv_files):
     # Change order of columns
     master_df = master_df[
         ["Review ID", 
-         "Review Date Submission Time", 
+         "Review Submission Date Time", 
          "Account ID",
          "Validated Listing ID",
          "Subject",
@@ -105,4 +108,4 @@ def create_vrbo_formatted(csv_files):
     # Remove duplicates
     master_df = master_df.drop_duplicates(subset="Review ID", keep="first")
         
-    master_df.to_csv(f"./uploads/VRBO_UPLOAD_Test1.csv", index=False, encoding='utf-8-sig')
+    master_df.to_csv(f"./uploads/VRBO_UPLOAD_{dt.today()}.csv", index=False, encoding='utf-8-sig')

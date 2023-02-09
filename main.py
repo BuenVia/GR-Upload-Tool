@@ -1,7 +1,7 @@
 from tkinter import *
 from tkinter import messagebox
 import os, glob
-from vrbo_formatter import create_vrbo_formatted, create_vrbo_unformatted
+from format_vrbo import create_vrbo_formatted, create_vrbo_unformatted
 
 
 """
@@ -31,7 +31,14 @@ vrbo_format_btn = Button()
 vrbo_format_btn.config(text="VRBO - Create Formatted Document...", command=vrbo_format, bg="#A2D9CE")
 vrbo_format_btn.grid(column=0, row=1, padx=30, pady=30)
 
-
+# TODO Build out Core OTA
+# TODO Translation funciontality
+# TODO Dupe Check
+# TODO Build out Activities
+# TODO Build out Personal Safety
+# TODO Success message
+# TODO Select files
+# TODO Clear button for the Upload files + export files
 
 
 window.mainloop()

@@ -1,0 +1,23 @@
+﻿"Topic = ""H&S VRBO Model - REF"">>Topic = ""Window"""
+Date exported: 09/02/23
+Exported by user: mclifford@expediagroup.com
+Classification: H&S VRBO Model - REF
+Report type: Topics Volume Report
+Project: Expedia
+Date range: from 05/02/23 to 06/02/23
+Date filter: 06/02/2023 - 06/02/2023
+Topic path: H&S VRBO Model - REF-->Window
+Sentiment Filter: All sentences
+Matched: 1 sentences
+"Window Rule #1: [ LEVEL:SENTENCE TYPE:KEYWORD {_catRef:[model:""H&S VRBO Model - Dutch"" path:""root"" node:""Window""], _catRef:[model:""H&S VRBO Model - English"" path:""root"" node:""Window""], _catRef:[model:""H&S VRBO Model - French"" path:""root"" node:""Window""], _catRef:[model:""H&S VRBO Model - German"" path:""root"" node:""Window""], _catRef:[model:""H&S VRBO Model - Italian"" path:""root"" node:""Window""], _catRef:[model:""H&S VRBO Model - Japanese"" path:""root"" node:""Window""], _catRef:[model:""H&S VRBO Model - Portuguese"" path:""root"" node:""Window""], _catRef:[model:""H&S VRBO Model - Portuguese (Brazil)"" path:""root"" node:""Window""], _catRef:[model:""H&S VRBO Model - Swedish"" path:""root"" node:""Window""], _catRef:[model:""H&S VRBO Model - Spanish"" path:""root"" node:""Window""], _catRef:[model:""H&S VRBO Model - Danish"" path:""root"" node:""Window""], }]"
+"H&S VRBO Model - REF Rule #2: [ LEVEL:SENTENCE TYPE:KEYWORD {HR_TSPID:""83""}] [ LEVEL:SENTENCE TYPE:AND_KEYWORD {_language:dutch, _language:english, _language:french, _language:german, _language:italian, _language:japanese, _language:portuguese, _language:portuguese(brazil), _language:spanish, _language:swedish, _language:danish, _languagedetected:danish, _language:""greek (modern)""}]"
+NaturalId,SentenceId,Source,ADM_EXPEDIAHOTELID,CB Date of Creation,Document Date,HA_HOTELNAME,HR_DISPLAYLOCALE,HR_TSPID,REVIEW_TITLE,Sentence,VerbatimType,Verbatim
+63e0cf69228afa6b0a8fcd98,8182114391,NOT SPECIFIED,59618349,1675677555673,06/02/2023 09:58:55 CST,prime location! walk to everything! free parking,en_us,83,huge disappointment. listing does not represent actual property.,"Window in Bedroom has thick dust caked on Bathroom has mold in shower, extreme water damaged molding and latches all broken to the slider doors.",HR_REVIEWTEXT,"This property is nice, but not being maintained and not the ""extreme attention to detail"" and ""perfection"" as claimed in the listing. 
+Many of the walls are beat up and in need of paint
+Living room TV never turned on or worked. 
+Couldn't open ice drawer in freezer or risk breaking plastic door
+Bedroom, side table cracked. TV remote in Bedroom broken, (backing doesn't stay on).
+Window in Bedroom has thick dust caked on
+Bathroom has mold in shower, extreme water damaged molding and latches all broken to the slider doors.
+
+When we attempted to have the manager come out, we were stood up following day, and finally came out in the afternoon of following day, right before our departure. Unable to fix the television or address other problems."
