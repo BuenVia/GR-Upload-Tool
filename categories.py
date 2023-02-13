@@ -152,8 +152,38 @@ cat_dict = {
             },
         }
 
-    # "":
-    #         {
-    #         "primCat": "",
-    #         "secCat": ""    
-    #         },
+    
+ota_cat_dict = {
+    "Fire": "Fire",
+    "Fire2": "Fire",
+    "Gas": "Gas",
+    "Gas2": "Gas",
+    "Balcony": "Balcony",
+    "Balcony2": "Balcony",
+    "Injury": "Injury",
+    "Injury2": "Injury",
+    "Customer": "Customer",
+    "Customer2": "Customer",
+    "Accommodation": "Accommodation",
+    "Accommodation2": "Accommodation",
+    "Electrical": "Electrical",
+    "Electrical2": "Electrical",
+    "Food Safety": "Food Safety",
+    "Food Safety2": "Food Safety",
+    "Pool Safety": "pPool Safety",
+    "Pool Safety2": "Pool Safety",
+    "Child": "Child",
+    "Child2": "Child",
+    "Lifts": "Lifts",
+    "Lifts2": "Lifts",
+    "Force Majeure": "Force Majeure",
+    "Force Majeure2": "Force Majeure",
+    "Pest-Control": "Pest-Control",
+    "Pest-Control2": "Pest-Control",
+    "Transport/Excursions": "Transport/Excursions",
+    "Transport/Excursions2": "Transport/Excursions",
+    "Beach Safety": "Beach Safety",
+    "Beach Safety2": "Beach Safety",
+    "Fatality": "Fatality",
+    "Fatality2": "Fatality",
+}
