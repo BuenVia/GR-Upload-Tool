@@ -4,14 +4,16 @@ Exported by user: mclifford@expediagroup.com
 Classification: Health and Safety - Ref
 Report type: Topics Volume Report
 Project: Expedia
-Date range: from 05/02/23 to 12/02/23
-Date filter: 06/02/2023 - 12/02/2023
+Date range: from 29/01/23 to 12/02/23
+Date filter: 30/01/2023 - 12/02/2023
 Topic path: Health and Safety - Ref-->Customer2
 Sentiment Filter: All sentences
-Matched: 9 sentences
+Matched: 17 sentences
 "Customer2 Rule #1: [ LEVEL:SENTENCE TYPE:KEYWORD {_catRef:[model:""Health and Safety Korean - APAC"" path:""root"" node:""Customer""], _catRef:[model:""Health and Safety Japanese - APAC"" path:""root"" node:""Customer""], _catRef:[model:""Health and Safety Thai"" path:""root"" node:""Customer""], _catRef:[model:""Health and Safety Greek"" path:""root"" node:""Customer""], _catRef:[model:""Health and Safety Chinese"" path:""root"" node:""Customer""], _catRef:[model:""Health and Safety Turkish"" path:""root"" node:""Customer""], _catRef:[model:""Health and Safety Icelandic"" path:""root"" node:""Customer""], _catRef:[model:""Health and Safety Croatian"" path:""root"" node:""Customer""], _catRef:[model:""Health and Safety Lithuanian"" path:""root"" node:""Customer""], _catRef:[model:""Health and Safety Latvian"" path:""root"" node:""Customer""], _catRef:[model:""Health and Safety Czech"" path:""root"" node:""Customer""], _catRef:[model:""Health and Safety Polish"" path:""root"" node:""Customer""], _catRef:[model:""Health and Safety Slovak"" path:""root"" node:""Customer""], _catRef:[model:""Health and Safety Estonian"" path:""root"" node:""Customer""], _catRef:[model:""Health and Safety Hungarian"" path:""root"" node:""Customer""], _catRef:[model:""Health and Safety Arabic"" path:""root"" node:""Customer""], _catRef:[model:""Health and Safety Hebrew"" path:""root"" node:""Customer""], _catRef:[model:""Health and Safety Vietnamese"" path:""root"" node:""Customer""], _catRef:[model:""Health and Safety Malaysian - APAC"" path:""root"" node:""Customer""], _catRef:[model:""Health and Safety Indonesian"" path:""root"" node:""Customer""], _catRef:[model:""Health and Safety Bosnian"" path:""root"" node:""Customer""]}] [ LEVEL:SENTENCE TYPE:NOT_KEYWORD {HA_PARENTCHAINNAME:""wyndham worldwide"", HA_PARENTCHAINNAME:""wyndham extra holidays"", HA_PARENTCHAINNAME:""wyndham vacation ownership"", HA_PARENTCHAINNAME:""hilton worldwide"", HA_PARENTCHAINNAME:choice, HA_PARENTCHAINNAME:""choice nordic"", HA_PARENTCHAINNAME:""choice global parent meso"", HA_PARENTCHAINNAME:marriott, HA_PARENTCHAINNAME:ihg, HA_PARENTCHAINNAME:""best western"", HA_PARENTCHAINNAME:""accor"", HA_PARENTCHAINNAME:starwood, HA_PARENTCHAINNAME:""starwood capital"", HA_PARENTCHAINNAME:carlson, HA_PARENTCHAINNAME:""hyatt hotels"", HA_PARENTCHAINNAME:""la quinta"", HA_PARENTCHAINNAME:""motel 6"", HA_PARENTCHAINNAME:""red roof inn"", HA_PARENTCHAINNAME:mgm, HA_PARENTCHAINNAME:""mgm muthu hotels"", HA_PARENTCHAINNAME:""americas best value inn"", HA_PARENTCHAINNAME:""america's best inns"", HA_PARENTCHAINNAME:""extended stay america"", HA_PARENTCHAINNAME:""louvre hotels"", HA_PARENTCHAINNAME:""caesars entertainment"", HA_PARENTCHAINNAME:""nh hotels"", HA_PARENTCHAINNAME:""melia hotels international"", HA_PARENTCHAINNAME:""red lion"", HA_PARENTCHAINNAME:""bedandbreakfast.com"", HA_PARENTCHAINNAME:""highgate independent"", HA_PARENTCHAINNAME:""scandic hotels chain"", HA_PARENTCHAINNAME:millennium, HA_PARENTCHAINNAME:omni}]"
 "Health and Safety - Ref Rule #2: [ LEVEL:SENTENCE TYPE:KEYWORD {HR_TPID""-401"", HR_TPID:""60000"", HR_TPID:""-1"", HR_TPID:""-101"", HR_TPID:""-102"", HR_TPID:""-103"", HR_TPID:""-104"", HR_TPID:""-105"", HR_TPID:""-106"", HR_TPID:""-107"", HR_TPID:""-108"", HR_TPID:""-109"", HR_TPID:""-110"", HR_TPID:""-111"", HR_TPID:""-112"", HR_TPID:""-113"", HR_TPID:""-114"", HR_TPID:""-115"", HR_TPID:""-116"", HR_TPID:""-117"", HR_TPID:""-118"", HR_TPID:""-119"", HR_TPID:""-120"", HR_TPID:""-121"", HR_TPID:""-122"", HR_TPID:""-123"", HR_TPID:""-124"", HR_TPID:""-125"", HR_TPID:""-126"", HR_TPID:""-127"", HR_TPID:""-128"", HR_TPID:""-129"", HR_TPID:""15"", HR_TPID:""-180"", HR_TPID:""-182"", HR_TPID:""-184"", HR_TPID:""-186"", HR_TPID:""-188"", HR_TPID:""-190"", HR_TPID:""-200"", HR_TPID:""-202"", HR_TPID:""-204"", HR_TPID:""-206"", HR_TPID:""-300"", HR_TPID:""3000"", HR_TPID:""30001"", HR_TPID:""30002"", HR_TPID:""30003"", HR_TPID:""30004"", HR_TPID:""3001"", HR_TPID:""3002"", HR_TPID:""30021"", HR_TPID:""30025"", HR_TPID:""30029"", HR_TPID:""3003"", HR_TPID:""30030"", HR_TPID:""30031"", HR_TPID:""30032"", HR_TPID:""30033"", HR_TPID:""30034"", HR_TPID:""3004"", HR_TPID:""3018"", HR_TPID:""3019"", HR_TPID:""-304"", HR_TPID:""-308"", HR_TPID:""-310"", HR_TPID:""3100"", HR_TPID:""3101"", HR_TPID:""3102"", HR_TPID:""3103"", HR_TPID:""3104"", HR_TPID:""3105"", HR_TPID:""3107"", HR_TPID:""3109"", HR_TPID:""3110"", HR_TPID:""3111"", HR_TPID:""3112"", HR_TPID:""3113"", HR_TPID:""3114"", HR_TPID:""3115"", HR_TPID:""3116"", HR_TPID:""3117"", HR_TPID:""3118"", HR_TPID:""3119"", HR_TPID:""-312"", HR_TPID:""3180"", HR_TPID:""-320"", HR_TPID:""3200"", HR_TPID:""3201"", HR_TPID:""3202"", HR_TPID:""3203"", HR_TPID:""3204"", HR_TPID:""3205"", HR_TPID:""3206"", HR_TPID:""3207"", HR_TPID:""3208"", HR_TPID:""3209"", HR_TPID:""3210"", HR_TPID:""3211"", HR_TPID:""3212"", HR_TPID:""3213"", HR_TPID:""3214"", HR_TPID:""-322"", HR_TPID:""-326"", HR_TPID:""3301"", HR_TPID:""-334"", HR_TPID:""-336"", HR_TPID:""-338"", HR_TPID:""-340"", HR_TPID:""3401"", HR_TPID:""-342"", HR_TPID:""-344"", HR_TPID:""-346"", HR_TPID:""-348"", HR_TPID:""3480"", HR_TPID:""-350"", HR_TPID:""-352"", HR_TPID:""-354"", HR_TPID:""-356"", HR_TPID:""-358"", HR_TPID:""-360"", HR_TPID:""-362"", HR_TPID:""-364"", HR_TPID:""-366"", HR_TPID:""-368"", HR_TPID:""-370"", HR_TPID:""-372"", HR_TPID:""-42"", HR_TPID:""4700"", HR_TPID:""4701"", HR_TPID:""4711"", HR_TPID:""4780"", HR_TPID:""4781"", HR_TPID:""61"", HR_TPID:""70201"", HR_TPID:""70205"", HR_TPID:""70406"", HR_TPID:""70463"", HR_TPID:""70472"", HR_TPID:""70473"", HR_TPID:""70501"", HR_TPID:""7101"", HR_TPID:""7102"", HR_TPID:""7103"", HR_TPID:""7104"", HR_TPID:""7105"", HR_TPID:""7107"", HR_TPID:""7109"", HR_TPID:""7110"", HR_TPID:""7111"", HR_TPID:""7114"", HR_TPID:""7115"", HR_TPID:""7116"", HR_TPID:11, HR_TPID:12, HR_TPID:16, HR_TPID:17, HR_TPID:18, HR_TPID:20, HR_TPID:25, HR_TPID:28, HR_TPID:29, HR_TPID:4980, HR_TPID:6, HR_TPID:62, HR_TPID:63, HR_TPID:64, HR_TPID:65, HR_TPID:66, HR_TPID:67, HR_TPID:69, HR_TPID:7, HR_TPID:70, HR_TPID:70125, HR_TPID:70129, HR_TPID:70301, HR_TPID:70403, HR_TPID:70420, HR_TPID:70465, HR_TPID:70472, HR_TPID:73, HR_TPID:75, HR_TPID:8, HR_TPID:80001, HR_TPID:80004, HR_TPID:9, HR_TSPID:83, HR-TPID:""-332"", HR_TPID:""21"", HR_TPID:""3120"", HR_TPID:""3121"", HR_TPID:""3122"", HR_TPID:""3123"", HR_TPID:""3124"", HR_TPID:""3125"", HR_TPID:""3126"", HR_TPID:""3127"", HR_TPID:""3128"", HR_TPID:""3129"", HR_TPID:""3130"", HR_TPID:""3131"", HR_TPID:""3135"", HR_TPID:""3136"", HR_TPID:""3137"", HR_TPID:""3141"", HR_TPID:""3145"", HR_TPID:""34"", HR_TPID:1, HR_TPID:3, HR_TPID:4, }] [ LEVEL:SENTENCE TYPE:AND_KEYWORD {_language:chinese, _language:danish, _language:dutch, _language:english, _language:finnish, _language:french, _language:german, _language:italian, _language:japanese, _language:""korean"", _language:""norwegian"", _language:""portuguese"", _language:russian, _language:spanish, _language:swedish, _language:thai, _language:chinese, _language:""turkish"", _language:""greek (modern)"", _language:""czech"", _language:""estonian"", _language:""polish"", _language:""slovak"", _language:""icelandic"", _language:croatian, _language:latvian, _language:hungarian, _language:arabic, _language:""hebrew (modern)"", _language:lithuanian, _language:bosnian, _language:indonesian, _language:malay, _language:serbian, _language:vietnamese}] [ LEVEL:SENTENCE TYPE:NOT_KEYWORD {_verbatimtype:""lb_bookingtxt""}]"
 NaturalId,SentenceId,Source,ADM_EXPEDIAHOTELID,CB Date of Creation,Document Date,HA_HOTELNAME,HR_DISPLAYLOCALE,HR_TPID,REVIEW_TITLE,Sentence,VerbatimType,Verbatim
+63dc7c37c1da6667a17e93cb,8180820677,NOT SPECIFIED,83928849,1675398368803,03/02/2023 03:15:03 CST,pearl star hotel atami,ja_jp,28,,また熱海に行く際は利用させて頂きたいと思います。,HR_REVIEWTEXT,恋人と利用しました。建物が美しく屋内に漂う香りに癒されました。お部屋はオーシャンビューの露天風呂があり、ベットからも海が眺められる配置となっていました。広々としていて木と木炭をイメージするようなお部屋を大変気に入りました。お部屋にある飲み物が全てフリーだったのがびっくりしました。静岡クラフトビールが2種類とオレンジジュース、ワイン、緑茶、水がそれぞれ用意して頂いてました。大浴場もオーシャンビューで広く清潔感がある大浴場でしたが、温泉の温度が低めだったので、私はお部屋の熱めの露天風呂の方がお気に入りです。恋人も大変気に入っていたようです。また熱海に行く際は利用させて頂きたいと思います。
+63dc7c37c1da6667a17e93cb,8180820675,NOT SPECIFIED,83928849,1675398368803,03/02/2023 03:15:03 CST,pearl star hotel atami,ja_jp,28,,大浴場もオーシャンビューで広く清潔感がある大浴場でしたが、温泉の温度が低めだったので、私はお部屋の熱めの露天風呂の方がお気に入りです。,HR_REVIEWTEXT,恋人と利用しました。建物が美しく屋内に漂う香りに癒されました。お部屋はオーシャンビューの露天風呂があり、ベットからも海が眺められる配置となっていました。広々としていて木と木炭をイメージするようなお部屋を大変気に入りました。お部屋にある飲み物が全てフリーだったのがびっくりしました。静岡クラフトビールが2種類とオレンジジュース、ワイン、緑茶、水がそれぞれ用意して頂いてました。大浴場もオーシャンビューで広く清潔感がある大浴場でしたが、温泉の温度が低めだったので、私はお部屋の熱めの露天風呂の方がお気に入りです。恋人も大変気に入っていたようです。また熱海に行く際は利用させて頂きたいと思います。
 63e0c9c594c8cf0f3d6056e4,8182124626,NOT SPECIFIED,21174653,1675680317648,06/02/2023 09:35:01 CST,hotel tops 10,ko_kr,-1,최악의 탑스텐 레스토랑,5인가족여행으로 23년 2월 3일 저녁에 탑스텐 레스토랑에서 저녁 뷔페 이용을 했는데 굴을 먹은 2인만 다음날부터 배가 아프기 시작해서 2일후인 일요일엔 구토와 설사로 굉장히 고생했습니다 월요일에 병원가서 진료를 보니 식중독 진단을 받았습니다 호텔 레스토랑측에 전화로 문의하니 그날 뷔페 이용을 한 다른 사용자도 동일 증상으로 컨플레임이 왔었다고 하더군요,HR_REVIEWTEXT,"5인가족여행으로 23년 2월 3일 저녁에 탑스텐 레스토랑에서 저녁 뷔페 이용을 했는데 굴을 먹은 2인만 다음날부터 배가 아프기 시작해서 2일후인 일요일엔 구토와 설사로 굉장히 고생했습니다
 월요일에 병원가서 진료를 보니 식중독 진단을 받았습니다
 호텔 레스토랑측에 전화로 문의하니 그날 뷔페 이용을 한 다른 사용자도 동일 증상으로 컨플레임이 왔었다고 하더군요
@@ -24,19 +26,60 @@ NaturalId,SentenceId,Source,ADM_EXPEDIAHOTELID,CB Date of Creation,Document Date
 
 식중독 걸린 2인에 대한 배상요구를 했더니 호텔레스토랑 담당자(과장)는 자기네 호텔 레스토랑에서 음식을 먹고 식중독에 걸렸다는 증빙을 고객이 직접 확보하지 않는 이상 보상이 어렵다고 회피만 했습니다(녹취 자료도 있습니다)
 병원서류에 굴을 먹고 나서부터 속이 안좋아지기 시작했다는 내용이 있다고 말했으나 그런건 증빙자료로 받아드리기 어렵고 식약처든 보건소든 신고해서 당시(23년 2월 3일) 굴에 문제가 있었던걸 증빙하라고 말장난을 하는 행테에 기가찼습니다"
+63e4b2dd889b102e37b6691b,8183099349,NOT SPECIFIED,2835050,1675936726508,09/02/2023 08:46:21 CST,vien dong hotel,ja_jp,-1,微妙,湯船があるのにお湯が途中で水に変わり熱いお湯に浸かれなかった。,HR_REVIEWTEXT,"湯船があるのにお湯が途中で水に変わり熱いお湯に浸かれなかった。最初は熱い湯が出ていたのに途中で水になり、暫くして出すとお湯が出る、そんな繰り返しだった。
+チェクインしてすぐ、セイフティボックスが壊れていてドワ毎交換していた。日々のチェックをしていないのか？部屋の窓のカーテンを開けると内側の廊下が...宿泊者から丸見えなので開けることが出来なかった。変な作りのホテルだと思う。場所は近くに繁華街もコンビニもすぐ近くにあり便利だと思う。フロント女の子が親切だった。実は２回目の滞在だったが、前は別の部屋だったので問題なかったが、今回は最初から問題がありがっかりした。"
+63e4b2dd889b102e37b6691b,8183099350,NOT SPECIFIED,2835050,1675936726508,09/02/2023 08:46:21 CST,vien dong hotel,ja_jp,-1,微妙,最初は熱い湯が出ていたのに途中で水になり、暫くして出すとお湯が出る、そんな繰り返しだった。,HR_REVIEWTEXT,"湯船があるのにお湯が途中で水に変わり熱いお湯に浸かれなかった。最初は熱い湯が出ていたのに途中で水になり、暫くして出すとお湯が出る、そんな繰り返しだった。
+チェクインしてすぐ、セイフティボックスが壊れていてドワ毎交換していた。日々のチェックをしていないのか？部屋の窓のカーテンを開けると内側の廊下が...宿泊者から丸見えなので開けることが出来なかった。変な作りのホテルだと思う。場所は近くに繁華街もコンビニもすぐ近くにあり便利だと思う。フロント女の子が親切だった。実は２回目の滞在だったが、前は別の部屋だったので問題なかったが、今回は最初から問題がありがっかりした。"
+63d7a26132130a162746b179,8179412852,NOT SPECIFIED,9622048,1675090159453,30/01/2023 10:56:33 CST,pension & restaurant bistare kana,ja_jp,28,,一方で、全体的に空調温度が低く、部屋のストーブをつけると今度は温度が上がりすぎて熱くてこまりました。,HR_REVIEWTEXT,オーナーの気さくな対応はとても良かったです。一方で、全体的に空調温度が低く、部屋のストーブをつけると今度は温度が上がりすぎて熱くてこまりました。北海道の宿泊施設では全館が温かいのが普通かと思います。あと共用設備では歯磨きのときのコップなどがなく、利用できる備品が貧弱なように思いました。
+63e05f9d91e0356fc664decf,8182013988,NOT SPECIFIED,11821181,1675652803142,06/02/2023 02:02:05 CST,ever delightful business hotel,zh_tw,62,,吃完早餐後拉肚子,HR_REVIEWTEXT,"棉被及床都舒服
+
+吃完早餐後拉肚子"
 63e0b1bf19d00a0fb091ed8a,8182102878,NOT SPECIFIED,73232,1675674712034,06/02/2023 07:52:31 CST,hotel metropolitan edmont tokyo,ja_jp,-1,受験生ママ,また、天井のダウンライトの下にいると熱かったです。,HR_REVIEWTEXT,"息子の受験のため利用しました
 綺麗で立派なホテルで勿体無いくらいでした
 ただ欲を言えば、机にスタンドが置かれてあり
 配慮を感じられましたが、勉強するにはお部屋
 自体が少し暗いかなと思いました。また、天井のダウンライトの下にいると熱かったです。決して苦情ではありません。総合的には快適でした。"
 63e221e8de200418ee5b1d95,8182574745,NOT SPECIFIED,12385623,1675768486271,07/02/2023 10:03:20 CST,hotel gracery naha,ja_jp,-1,レンタカーを借りる場合は注意,モノレール駅から近く、国際通りに面している為車無しの場合は良いが、レンタカーを借りる場合は1回最大1500円がかかり、かつ近くに駐車場が借りれない場合がある為注意。,HR_REVIEWTEXT,モノレール駅から近く、国際通りに面している為車無しの場合は良いが、レンタカーを借りる場合は1回最大1500円がかかり、かつ近くに駐車場が借りれない場合がある為注意。
-63e4b2dd889b102e37b6691b,8183099350,NOT SPECIFIED,2835050,1675936726508,09/02/2023 08:46:21 CST,vien dong hotel,ja_jp,-1,微妙,最初は熱い湯が出ていたのに途中で水になり、暫くして出すとお湯が出る、そんな繰り返しだった。,HR_REVIEWTEXT,"湯船があるのにお湯が途中で水に変わり熱いお湯に浸かれなかった。最初は熱い湯が出ていたのに途中で水になり、暫くして出すとお湯が出る、そんな繰り返しだった。
-チェクインしてすぐ、セイフティボックスが壊れていてドワ毎交換していた。日々のチェックをしていないのか？部屋の窓のカーテンを開けると内側の廊下が...宿泊者から丸見えなので開けることが出来なかった。変な作りのホテルだと思う。場所は近くに繁華街もコンビニもすぐ近くにあり便利だと思う。フロント女の子が親切だった。実は２回目の滞在だったが、前は別の部屋だったので問題なかったが、今回は最初から問題がありがっかりした。"
-63e4b2dd889b102e37b6691b,8183099349,NOT SPECIFIED,2835050,1675936726508,09/02/2023 08:46:21 CST,vien dong hotel,ja_jp,-1,微妙,湯船があるのにお湯が途中で水に変わり熱いお湯に浸かれなかった。,HR_REVIEWTEXT,"湯船があるのにお湯が途中で水に変わり熱いお湯に浸かれなかった。最初は熱い湯が出ていたのに途中で水になり、暫くして出すとお湯が出る、そんな繰り返しだった。
-チェクインしてすぐ、セイフティボックスが壊れていてドワ毎交換していた。日々のチェックをしていないのか？部屋の窓のカーテンを開けると内側の廊下が...宿泊者から丸見えなので開けることが出来なかった。変な作りのホテルだと思う。場所は近くに繁華街もコンビニもすぐ近くにあり便利だと思う。フロント女の子が親切だった。実は２回目の滞在だったが、前は別の部屋だったので問題なかったが、今回は最初から問題がありがっかりした。"
-63e35396de200418ee5ed12c,8182933890,NOT SPECIFIED,10165504,1675846583905,08/02/2023 07:47:34 CST,miyako hotel hakata,ja_jp,28,,加熱？）,HR_REVIEWTEXT,スパ真下の部屋はたまに聞こえる機械（水の循環？加熱？）の音が少し気になりました。
-63e05f9d91e0356fc664decf,8182013988,NOT SPECIFIED,11821181,1675652803142,06/02/2023 02:02:05 CST,ever delightful business hotel,zh_tw,62,,吃完早餐後拉肚子,HR_REVIEWTEXT,"棉被及床都舒服
+63de0a16bf399a3fff177bb6,8181274717,NOT SPECIFIED,86762811,1675501017363,04/02/2023 07:32:38 CST,fav hotel hiroshima heiwa odori,ja_jp,-1,接客はないものと割り切れば新しく綺麗で快適,便座が熱くて調整できず尻が火傷しそうです。,HR_REVIEWTEXT,"出来たばかりで清潔感があり快適でした。
+お風呂も広くて気持ちよいです。
+トイレはちょっと不満。手洗いはあるのですがハンドソープなし。便座が熱くて調整できず尻が火傷しそうです。
+あと、部屋のエアコンのランプが明るすぎて睡眠の邪魔になります。気になる方は困ると思います。
+ちょっとだけ気になったのは、床が所々ペコペコと凹むところ。問題はないと思うのですが、なにやら安っぽさを感じました。
 
-吃完早餐後拉肚子"
+部屋の鍵はオートロックで、4桁の番号で開けるタイプ。これはちょっと不安。番号が分かれば誰でも開けられてしまいます。
+
+立地的には薬研堀の端っこという感じ。繁華街までは歩いて行けます。コンビニも近く便利。
+
+基本駐車場はなく、車の場合は近くのコインパーキングを利用することになります。サービスチケットなどはありません。
+
+スタッフは受付に常時1名？という感じ。みなホテルでの接客経験のない若いバイトさん達のようで、正直なところあまり頼りになりません。アメニティなどは受付でお願いして受け取る方式で、部屋に持ってきてくれたりはしません。ここは割り切りですね。"
+63db7a7754d6022716b1422a,8180513842,NOT SPECIFIED,3872807,1675332076253,02/02/2023 08:55:19 CST,studios2let bloomsbury,ja_jp,28,,暖房が弱くとても寒い部屋とサウナのように熱い部屋だった。,HR_REVIEWTEXT,暖房が弱くとても寒い部屋とサウナのように熱い部屋だった。
+63da18cd51556b2eda8f3bdf,8180104392,NOT SPECIFIED,35708398,1675241996955,01/02/2023 07:46:21 CST,sala danang beach hotel,ja_jp,-1,,ただみんなが書いていたように 熱いお湯はでませんでした。,HR_REVIEWTEXT,"部屋からは　海も見えて　いい部屋ではありましたが　思っていたよりは狭かったです。テレビの下にでも　トランクの中のもの入れられる家具があれば良かったかなと。
+寝具はとても良かったです　枕も合って　ベッドもよく　かけ布団になっていたのは良かったです。ただみんなが書いていたように　熱いお湯はでませんでした。シャワーの後　床が濡れて困りました"
+63e35396de200418ee5ed12c,8182933890,NOT SPECIFIED,10165504,1675846583905,08/02/2023 07:47:34 CST,miyako hotel hakata,ja_jp,28,,加熱？）,HR_REVIEWTEXT,スパ真下の部屋はたまに聞こえる機械（水の循環？加熱？）の音が少し気になりました。
+63d7633a32130a162745b93f,8179352342,NOT SPECIFIED,76303998,1675064494111,30/01/2023 06:27:06 CST,sotetsu fresa inn sendai,ja_jp,28,,気になった点 ・1月下旬の宿泊でしたが、館内は暖房がなくても かなり断熱が効いているようで寒くはなかったものの 乾燥がとても酷く、加湿器無しでは耐えられない程であった。（,HR_REVIEWTEXT,"スタンダードダブルルームに2名での宿泊でした。
+気になった点
+・1月下旬の宿泊でしたが、館内は暖房がなくても
+　かなり断熱が効いているようで寒くはなかったものの
+　乾燥がとても酷く、加湿器無しでは耐えられない程であった。（備え付けで空気清浄機 加湿器はありました）
+・定員2名とあるが2名で宿泊するには
+　部屋が狭いと感じた。荷物を置くスペースが少なく、
+　ベッド下にキャリーケースなどは置けるようだったが
+　バックパックに荷造りしていたので
+　直置きは抵抗があったのでなんとか狭いスペースで
+　整理整頓をしたが、二人での宿泊ではおススメできない。
+・エントランスにセルフクロークがあって
+　便利ではあるのだが、自分の交通系ICを使うタイプで、使い方がわかりづらい。また解除しようとしたら
+エラーで結局スタッフの手を煩わせる形となってしまった。
+・二名での宿泊予約でしたが、枕が固め・柔らかめの1セットしか置いてませんでした。1日目は仕方なく夫に固めを、私は柔らかめを使用したがあまりにもあわず、ロビーに問い合わせして枕をもう1セット追加していただきました。その際の対応は気持ちよくしていただきありがとうございます。
+
+良かった点
+・事前のQRコードによりチェックインが非常にスマート
+・何かあったときのスタッフさんたちの対応は
+　とても迅速丁寧でした。
+
+個人的には1人利用の
+出張向けの宿泊に丁度よいホテルに感じました。"
 63e1178e1691da7d7594143b,8182247264,NOT SPECIFIED,3008903,1675701043271,06/02/2023 15:06:54 CST,hotel villa fontaine tokyo - kudanshita,ja_jp,28,,熱いものを飲むのに、やりづらい。,HR_REVIEWTEXT,"お茶を飲むカップが、薄い紙コップ。
 熱いものを飲むのに、やりづらい。"
+63db016385012b4080c8b4bf,8180381568,NOT SPECIFIED,3567190,1675301054518,02/02/2023 00:18:43 CST,hotel mystays kanazawa castle,ja_jp,28,,外気温が低かったので、気を使っていただいたんだと思いますが、お風呂の温度が熱く、中に入れませんでした。,HR_REVIEWTEXT,外気温が低かったので、気を使っていただいたんだと思いますが、お風呂の温度が熱く、中に入れませんでした。その他は大変満足しております。

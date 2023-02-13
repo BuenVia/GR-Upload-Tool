@@ -1,0 +1,27 @@
+﻿"Topic = ""H&S VRBO Model - REF"">>Topic = ""Lifts"""
+Date exported: 13/02/23
+Exported by user: mclifford@expediagroup.com
+Classification: H&S VRBO Model - REF
+Report type: Topics Volume Report
+Project: Expedia
+Date range: from 29/01/23 to 12/02/23
+Date filter: 30/01/2023 - 12/02/2023
+Topic path: H&S VRBO Model - REF-->Lifts
+Sentiment Filter: All sentences
+Matched: 3 sentences
+"Lifts Rule #1: [ LEVEL:SENTENCE TYPE:KEYWORD {_catRef:[model:""H&S VRBO Model - Dutch"" path:""root"" node:""Lifts""], _catRef:[model:""H&S VRBO Model - English"" path:""root"" node:""Lifts""], _catRef:[model:""H&S VRBO Model - French"" path:""root"" node:""Lifts""], _catRef:[model:""H&S VRBO Model - German"" path:""root"" node:""Lifts""], _catRef:[model:""H&S VRBO Model - Italian"" path:""root"" node:""Lifts""], _catRef:[model:""H&S VRBO Model - Japanese"" path:""root"" node:""Lifts""], _catRef:[model:""H&S VRBO Model - Portuguese"" path:""root"" node:""Lifts""], _catRef:[model:""H&S VRBO Model - Portuguese (Brazil)"" path:""root"" node:""Lifts""], _catRef:[model:""H&S VRBO Model - Swedish"" path:""root"" node:""Lifts""], _catRef:[model:""H&S VRBO Model - Spanish"" path:""root"" node:""Lifts""], _catRef:[model:""H&S VRBO Model - Danish"" path:""root"" node:""Lifts""], }]"
+"H&S VRBO Model - REF Rule #2: [ LEVEL:SENTENCE TYPE:KEYWORD {HR_TSPID:""83""}] [ LEVEL:SENTENCE TYPE:AND_KEYWORD {_language:dutch, _language:english, _language:french, _language:german, _language:italian, _language:japanese, _language:portuguese, _language:portuguese(brazil), _language:spanish, _language:swedish, _language:danish, _languagedetected:danish, _language:""greek (modern)""}]"
+NaturalId,SentenceId,Source,ADM_EXPEDIAHOTELID,CB Date of Creation,Document Date,HA_HOTELNAME,HR_DISPLAYLOCALE,HR_TSPID,REVIEW_TITLE,Sentence,VerbatimType,Verbatim
+63d803f68e9a374da83a8d09,8179495918,NOT SPECIFIED,71625569,1675102125104,30/01/2023 17:52:54 CST,"gulf-front condo with balcony, pool, hot tub, sauna, gym & central ac",en_us,83,wasn't that great of a stay,The elevator broke and was stuck on the fifth floor the first night of the stay.,HR_REVIEWTEXT,Didn't know the pool and hottub was out of order until the week of. The elevator broke and was stuck on the fifth floor the first night of the stay. Couldn't cancel my stay cause I wouldn't get any money back.
+63d6de127cd117406b350340,8179194928,NOT SPECIFIED,82703852,1675025986337,29/01/2023 20:58:58 CST,gulf views-new home-private pool/heat option & hot tub-10 bikes-`sunlight coast`,en_us,83,a new way of luxury!,"1) If you get stuck between floors in the elevator outside of business hours, try all possible fix actions first.",HR_REVIEWTEXT,"30A-Vacations was outstanding! The property is amazing and it was truly a pleasure being able to enjoy the property and 30A-Vacations outstanding service. When I originally booked the place it had a lot of availability, I imagined because it’s new. Agreeing seeing everything, I know that’s the case! I’ve got no doubt that this’ll be one that fills up quickly in the future! My family and I will be on it! Three things to note:
+
+1) If you get stuck between floors in the elevator outside of business hours, try all possible fix actions first. Then call the fire department. That emergency number that’s given to you is not a 24 hour emergency line.
+
+2) If you want hot tub / pool heating access during your stay, communicate that ahead of time.(At least 3 days) I missed that memo and in turn missed out on the hot fun. :(
+
+3) Have a blast!
+
+Thanks again 30A
+
+We’ll see you soon!"
+63d7d9c7de9ba87ef6aaa8b7,8179427054,NOT SPECIFIED,29636505,1675092284168,30/01/2023 14:52:55 CST,condo great for 2 couples or a family walk to town mountain view wifi,en_us,83,disappointed,The elevator did not work properly...my husband & son were stuck when trying to check out with our luggage on a luggage cart.,HR_REVIEWTEXT,"I rented this condo for a family weekend getaway. The proximity to the main strip in Gatlinburg is great. The building, though, is run down. One main reason I booked this room was because it had an indoor pool for my kids, but the pool was closed. However, there were about 10 young adults/teens partying in the pool area around 10 pm...drinking & smoking pot, which could be smelled in the room. The elevator didn't work properly...my husband & son were stuck when trying to check out with our luggage on a luggage cart. The bathtubs looked dingy & every sink/tub seemed clogged (wouldn't properly drain). The beds were rock hard. The tvs were a pain to try & figure out (multiple remotes, some without batteries) & no instructions. I was leery of using the towels because they didn't smell clean/looked dingy. There was accumulated dust on fixtures feom the ceiling. The parking area is very small & the spaces are too narrow. My son has special needs & we have a hanicapped tag for him...there were yound adults outside messing around & parked in a handicapped spot without a handicapped placard or tag. With no office or officials there, we had no way to have any of our issues handled. All in all, it was truly an awful experience & this place is not for people seeking a nice family trip."

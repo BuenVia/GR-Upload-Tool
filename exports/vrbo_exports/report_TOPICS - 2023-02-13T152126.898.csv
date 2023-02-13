@@ -1,0 +1,15 @@
+﻿"Topic = ""H&S VRBO Model - REF"">>Topic = ""Transport/Excursions"""
+Date exported: 13/02/23
+Exported by user: mclifford@expediagroup.com
+Classification: H&S VRBO Model - REF
+Report type: Topics Volume Report
+Project: Expedia
+Date range: from 29/01/23 to 12/02/23
+Date filter: 30/01/2023 - 12/02/2023
+Topic path: H&S VRBO Model - REF-->Transport/Excursions
+Sentiment Filter: All sentences
+Matched: 1 sentences
+"Transport/Excursions Rule #1: [ LEVEL:SENTENCE TYPE:KEYWORD {_catRef:[model:""H&S VRBO Model - Dutch"" path:""root"" node:""Transport/Excursions""], _catRef:[model:""H&S VRBO Model - English"" path:""root"" node:""Transport/Excursions""], _catRef:[model:""H&S VRBO Model - French"" path:""root"" node:""Transport/Excursions""], _catRef:[model:""H&S VRBO Model - German"" path:""root"" node:""Transport/Excursions""], _catRef:[model:""H&S VRBO Model - Italian"" path:""root"" node:""Transport/Excursions""], _catRef:[model:""H&S VRBO Model - Japanese"" path:""root"" node:""Transport/Excursions""], _catRef:[model:""H&S VRBO Model - Portuguese"" path:""root"" node:""Transport/Excursions""], _catRef:[model:""H&S VRBO Model - Portuguese (Brazil)"" path:""root"" node:""Transport/Excursions""], _catRef:[model:""H&S VRBO Model - Swedish"" path:""root"" node:""Transport/Excursions""], _catRef:[model:""H&S VRBO Model - Spanish"" path:""root"" node:""Transport/Excursions""], _catRef:[model:""H&S VRBO Model - Danish"" path:""root"" node:""Transport/Excursions""], }]"
+"H&S VRBO Model - REF Rule #2: [ LEVEL:SENTENCE TYPE:KEYWORD {HR_TSPID:""83""}] [ LEVEL:SENTENCE TYPE:AND_KEYWORD {_language:dutch, _language:english, _language:french, _language:german, _language:italian, _language:japanese, _language:portuguese, _language:portuguese(brazil), _language:spanish, _language:swedish, _language:danish, _languagedetected:danish, _language:""greek (modern)""}]"
+NaturalId,SentenceId,Source,ADM_EXPEDIAHOTELID,CB Date of Creation,Document Date,HA_HOTELNAME,HR_DISPLAYLOCALE,HR_TSPID,REVIEW_TITLE,Sentence,VerbatimType,Verbatim
+63e4c936b987445ea69d28d6,8183099838,NOT SPECIFIED,73255150,1675938113227,09/02/2023 10:21:42 CST,"val claret, real ski in ski out, garage and cleaning included, sunday to sun.",fr_fr,83,tout était parfait sur le plan de la propriété,"Malheureusement 1) les pistes avaient trop de monde qui se conduisaient d' une facon souvent très dangereuse, pas comme nos visites précédentes et 2) nos jeunes voisins sont rentrés le matin vers 3h30 et se sont disputés bruyamment avant de sortir les lits violemment vers 5h00.",HR_REVIEWTEXT,"Appartement et environs parfaits. Malheureusement 1) les pistes avaient trop de monde qui se conduisaient d'une facon souvent très dangereuse, pas comme nos visites précédentes et 2) nos jeunes voisins sont rentrés le matin vers 3h30 et se sont disputés bruyamment avant de sortir les lits violemment vers 5h00. Nous avons mal dormi. Nous avone quitté la station mardi, trop de stress."

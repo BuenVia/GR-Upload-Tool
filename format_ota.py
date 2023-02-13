@@ -54,7 +54,7 @@ def create_ota_formatted(csv_files):
         data["Status"] = ["New" if primCat == "Fire" or primCat == "Gas" else "Pending - Vendor" for primCat in data["Primary Category"]]
         data["Blocker"] = ["" if primCat == "Fire" or primCat == "Gas" else "Awaiting Response" for primCat in data["Primary Category"]]
         data["Auto Chase Status"] = "Not Applicable"
-        data["Translated Description"] = [translator.translate(desc).text for desc in data["Description"]]
+        data["Translated Description"] = "NULL"
         
         #Push data to DFS list
         dfs.append(data)
