@@ -1,0 +1,15 @@
+﻿"Topic = ""H&S VRBO Model - REF"">>Topic = ""Pool Chlorinated Water"""
+Date exported: 13/02/23
+Exported by user: mclifford@expediagroup.com
+Classification: H&S VRBO Model - REF
+Report type: Topics Volume Report
+Project: Expedia
+Date range: from 29/01/23 to 12/02/23
+Date filter: 30/01/2023 - 12/02/2023
+Topic path: H&S VRBO Model - REF-->Pool Chlorinated Water
+Sentiment Filter: All sentences
+Matched: 1 sentences
+"Pool Chlorinated Water Rule #1: [ LEVEL:SENTENCE TYPE:KEYWORD {_catRef:[model:""H&S VRBO Model - Dutch"" path:""root"" node:""Pool Chlorinated Water""], _catRef:[model:""H&S VRBO Model - English"" path:""root"" node:""Pool Chlorinated Water""], _catRef:[model:""H&S VRBO Model - French"" path:""root"" node:""Pool Chlorinated Water""], _catRef:[model:""H&S VRBO Model - German"" path:""root"" node:""Pool Chlorinated Water""], _catRef:[model:""H&S VRBO Model - Italian"" path:""root"" node:""Pool Chlorinated Water""], _catRef:[model:""H&S VRBO Model - Japanese"" path:""root"" node:""Pool Chlorinated Water""], _catRef:[model:""H&S VRBO Model - Portuguese"" path:""root"" node:""Pool Chlorinated Water""], _catRef:[model:""H&S VRBO Model - Portuguese (Brazil)"" path:""root"" node:""Pool Chlorinated Water""], _catRef:[model:""H&S VRBO Model - Swedish"" path:""root"" node:""Pool Chlorinated Water""], _catRef:[model:""H&S VRBO Model - Spanish"" path:""root"" node:""Pool Chlorinated Water""], _catRef:[model:""H&S VRBO Model - Danish"" path:""root"" node:""Pool Chlorinated Water""], }]"
+"H&S VRBO Model - REF Rule #2: [ LEVEL:SENTENCE TYPE:KEYWORD {HR_TSPID:""83""}] [ LEVEL:SENTENCE TYPE:AND_KEYWORD {_language:dutch, _language:english, _language:french, _language:german, _language:italian, _language:japanese, _language:portuguese, _language:portuguese(brazil), _language:spanish, _language:swedish, _language:danish, _languagedetected:danish, _language:""greek (modern)""}]"
+NaturalId,SentenceId,Source,ADM_EXPEDIAHOTELID,CB Date of Creation,Document Date,HA_HOTELNAME,HR_DISPLAYLOCALE,HR_TSPID,REVIEW_TITLE,Sentence,VerbatimType,Verbatim
+63dff29101a87329097f620c,8181871199,NOT SPECIFIED,23777178,1675621051722,05/02/2023 18:16:49 CST,restful  and quaint cottage,en_us,83,cottage review,"But the hot tub had too much chlorine, which caused a rash on the both of us.",HR_REVIEWTEXT,"The cottage was the perfect place for us to stay for a weekend getaway. And it was so cute. But the hot tub had too much chlorine, which caused a rash on the both of us."
