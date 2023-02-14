@@ -1,6 +1,6 @@
 import re
 import pandas as pd
-from datetime import datetime as dt
+from datetime import datetime, date as dt
 from categories import ota_cat_dict as cat
 from googletrans import Translator
 
@@ -8,7 +8,7 @@ translator = Translator()
 
 def date_format(od):
     date_str = re.search(r"\d{2}/\d{2}/\d{4}", od)
-    res = dt.strptime(date_str.group(), "%d/%m/%Y").date()
+    res = datetime.strptime(date_str.group(), "%d/%m/%Y").date()
     return (f"{res.strftime('%m/%d/%Y')}T01:00:00.000GMT")
 
 def create_ota_unformatted(csv_files):
@@ -28,7 +28,7 @@ def create_ota_unformatted(csv_files):
         dfs.append(new_data)
     
     master_df = pd.concat(dfs)
-    master_df.to_csv(f"./uploads/OTA_EXPORT.csv", index=False, encoding='utf-8-sig')
+    master_df.to_csv(f"./uploads/OTA_EXPORT_{dt.today()}.csv", index=False, encoding='utf-8-sig')
     
 def create_ota_formatted(csv_files):
     master_df = pd.DataFrame()
@@ -93,5 +93,5 @@ def create_ota_formatted(csv_files):
     master_df = master_df.drop_duplicates(subset="Review ID", keep="first")
     
     # Final document to CSV
-    master_df.to_csv(f"./uploads/OTA_UPLOAD.csv", index=False, encoding='utf-8-sig')
+    master_df.to_csv(f"./uploads/OTA_UPLOAD_{dt.today()}.csv", index=False, encoding='utf-8-sig')
     
