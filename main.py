@@ -3,6 +3,7 @@ from tkinter import messagebox, filedialog
 import os, glob
 from format_vrbo import create_vrbo_formatted, create_vrbo_unformatted
 from format_ota import create_ota_unformatted, create_ota_formatted
+from format_ps import create_ps_unformatted, create_ps_formatted
 import pandas as pd
 
 """
@@ -14,12 +15,19 @@ def open_vrbo_files():
     csv_files = filedialog.askopenfilenames()
     create_vrbo_unformatted(csv_files)
     create_vrbo_formatted(csv_files)
-        
+    show_files()
 
 def open_ota_format():
     csv_files = filedialog.askopenfilenames()
     create_ota_unformatted(csv_files)
     create_ota_formatted(csv_files)
+    show_files()
+    
+def open_ps_format():
+    csv_files = filedialog.askopenfilenames()
+    create_ps_unformatted(csv_files)
+    create_ps_formatted(csv_files)
+    show_files()
 
 def delete_file():
     is_delete = messagebox.askokcancel(title="Delete", message="You are about to delete all formatted files.")
@@ -31,10 +39,8 @@ def delete_file():
             
 def show_files():
     path = "./uploads/"
-    dir_list = os.listdir(path)
-    print(dir_list)
-        
-show_files()
+    path = os.path.realpath(path)
+    os.startfile(path)
 
 window = Tk()
 window.minsize(80, 80)
@@ -52,23 +58,27 @@ ota_format_btn = Button()
 ota_format_btn.config(text="OTA", command=open_ota_format, bg="#A2D9CE", padx=10, pady=10)
 ota_format_btn.grid(column=0, row=2, padx=30, pady=30)
 
+ps_format_btn = Button()
+ps_format_btn.config(text="Personal Safety", command=open_ps_format, bg="#A2D9CE", padx=10, pady=10)
+ps_format_btn.grid(column=0, row=3, padx=30, pady=30)
+
 delete_label = Label(text="Delete's all previously formatted files.", font=("Arial", 12, "normal"), fg="white", bg="#A2D9CE")
-delete_label.grid(column=0, row=3)
+delete_label.grid(column=0, row=4)
 
 delete_btn = Button()
 delete_btn.config(text="DELETE", command=delete_file, bg="Red")
-delete_btn.grid(column=0, row=4, padx=30, pady=10)
+delete_btn.grid(column=0, row=5, padx=30, pady=10)
 
 # TODO Build out Core OTA
+# TODO Select files
+# TODO Delete button for the Upload files + export files
 # ======
+# TODO Build out Personal Safety
+# TODO Build out Activities
 # TODO Translation funciontality
 # TODO Dupe Check
-# TODO Build out Activities
-# TODO Build out Personal Safety
 # TODO Success message
 # TODO Error message(s)
-# TODO Select files
-# TODO Clear button for the Upload files + export files
 
 
 window.mainloop()
