@@ -1,10 +1,8 @@
 from tkinter import *
 from tkinter import messagebox, filedialog
 import os, glob
-from format_vrbo import create_vrbo_formatted, create_vrbo_unformatted
-from format_ota import create_ota_unformatted, create_ota_formatted
-from format_ps import create_ps_unformatted, create_ps_formatted
-import pandas as pd
+
+from format_func import create_unformatted, create_formatted
 
 """
 First part of the program returns the unformatted csv with the raw data extracted from SalesForce.
@@ -13,20 +11,20 @@ Second part of the program formats the data ready for DataLoader.
 
 def open_vrbo_files():
     csv_files = filedialog.askopenfilenames()
-    create_vrbo_unformatted(csv_files)
-    create_vrbo_formatted(csv_files)
+    create_unformatted(csv_files, "vrbo")
+    create_formatted(csv_files, "vrbo")
     show_files()
 
 def open_ota_format():
     csv_files = filedialog.askopenfilenames()
-    create_ota_unformatted(csv_files)
-    create_ota_formatted(csv_files)
+    create_unformatted(csv_files, "ota")
+    create_formatted(csv_files, "ota")
     show_files()
     
 def open_ps_format():
     csv_files = filedialog.askopenfilenames()
-    create_ps_unformatted(csv_files)
-    create_ps_formatted(csv_files)
+    create_unformatted(csv_files, "ps")
+    create_formatted(csv_files, "ps")
     show_files()
 
 def delete_file():
