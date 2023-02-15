@@ -2,9 +2,6 @@ import re
 import pandas as pd
 from datetime import datetime, date as dt
 from categories import ota_cat_dict as cat
-from googletrans import Translator
-
-translator = Translator()
 
 def date_format(od):
     date_str = re.search(r"\d{2}/\d{2}/\d{4}", od)
@@ -37,11 +34,9 @@ def create_ota_formatted(csv_files):
     for f in csv_files:
         pc_item = pd.read_csv(f, nrows=8)
         pc = pc_item.iat[7,0]
-        
         df = pd.read_csv(f, skiprows=13)
         data = pd.DataFrame(df)
         
-        # TODO formatting...
         data["Topic"] = pc[38:]
         data["Primary Category"] = [cat[topic] for topic in data["Topic"]]
         data["Description"] = data["Sentence"] + "\n----- \n" + data["Verbatim"]
@@ -61,11 +56,9 @@ def create_ota_formatted(csv_files):
         
     master_df = pd.concat(dfs)
     
-    # TODO fomat date and sentence
     master_df["Document Date"] = [date_format(date) for date in master_df["Document Date"]]
     master_df["Sentence"] = [sentence[:250] for sentence in master_df["Sentence"]]
     
-    # TODO Rename the columns
     master_df = master_df.rename(columns={
         "NaturalId": "Review ID",
         "Document Date": "Review Submission Date Time",
@@ -73,8 +66,7 @@ def create_ota_formatted(csv_files):
         "HR_TPID": "TPID",
         "Sentence": "Subject"
     })
-    
-    # TODO Change order of columns
+
     master_df = master_df[
         ["Review ID", "Review Submission Date Time", "Account ID", "TPID", "Subject", "Primary Category", "Description",
          "Case Origin",
@@ -88,8 +80,7 @@ def create_ota_formatted(csv_files):
          "Auto Chase Status",
          "Translated Description"]
     ]
-    
-    # TODO Remove duplicates
+
     master_df = master_df.drop_duplicates(subset="Review ID", keep="first")
     
     # Final document to CSV

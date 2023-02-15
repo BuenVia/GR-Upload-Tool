@@ -1,10 +1,8 @@
 import re
 import pandas as pd
+from tkinter import filedialog
 from datetime import datetime, date as dt
 from categories import cat_dict as cat
-from googletrans import Translator
-
-translator = Translator()
 
 # Function to format the date as per Dataloader/SalesForce requirements
 def date_format(od):
@@ -12,11 +10,10 @@ def date_format(od):
     res = datetime.strptime(date_str.group(), "%d/%m/%Y").date()
     return (f"{res.strftime('%m/%d/%Y')}T01:00:00.000GMT")
 
-"""Merges and creates an unformatted csv file of the VRBO data"""
+"""Merges all selected files to make one masterfile and saves it in the export folder"""
 def create_vrbo_unformatted(csv_files):
     master_df = pd.DataFrame()
     dfs = []
-
     for f in csv_files:
         # Finds the topic in row 8
         pc_item = pd.read_csv(f, nrows=8)
@@ -24,13 +21,9 @@ def create_vrbo_unformatted(csv_files):
         # Pulls all data from line 14 onwards
         df = pd.read_csv(f, skiprows=13)
         new_data = pd.DataFrame(df)
-            
         new_data["Topic"] = pc[35:]
-        
         dfs.append(new_data)
-        
     master_df = pd.concat(dfs)
-        
     master_df.to_csv(f"./uploads/VRBO_EXPORT_{dt.today()}.csv", index=False, encoding='utf-8-sig')
 
 """Merges and creates a formatted version of the merged VRBO"""
@@ -109,5 +102,4 @@ def create_vrbo_formatted(csv_files):
     
     # Remove duplicates
     master_df = master_df.drop_duplicates(subset="Review ID", keep="first")
-        
     master_df.to_csv(f"./uploads/VRBO_UPLOAD_{dt.today()}.csv", index=False, encoding='utf-8-sig')
