@@ -38,11 +38,14 @@ def delete_file():
                 return
             else:
                 for f in csv_files:
-                    os.remove(f)
+                    try:
+                        os.remove(f)
+                    except:
+                        messagebox.showerror(title="Error", message="There was an error, please trye again.")
+                    else:
+                        messagebox.showinfo(title="Success", message="Successfully deleted.")
     except PermissionError as err:
         messagebox.showerror(title="Error", message=f"{err}\n\nPLEASE CLOSE THE SPREADHSEET THEN TRY AGAIN...")
-    else:
-        messagebox.showinfo(title="Success", message="Successfully deleted.")
         
 def show_files():
     path = "./uploads/"
@@ -54,22 +57,22 @@ window.minsize(80, 80)
 window.title("Upload Tool")
 window.config(padx=50, pady=50, bg="#48C9B0")
 
-title_label = Label(text="CIGR Formatter", font=("Courier", 24, "bold"), fg="white", bg="#48C9B0", highlightthickness=0)
+title_label = Label(text="GR Formatter", font=("Courier", 24, "bold"), fg="white", bg="#48C9B0", highlightthickness=0)
 title_label.grid(column=0, row=0)
 
 vrbo_format_btn = Button()
-vrbo_format_btn.config(text="VRBO", command=open_vrbo_files, bg="#A2D9CE", padx=10, pady=10)
+vrbo_format_btn.config(text="VRBO", command=open_vrbo_files, bg="#A2D9CE", padx=10, pady=10, width=50)
 vrbo_format_btn.grid(column=0, row=1, padx=30, pady=30)
 
 ota_format_btn = Button()
-ota_format_btn.config(text="OTA", command=open_ota_format, bg="#A2D9CE", padx=10, pady=10)
+ota_format_btn.config(text="OTA", command=open_ota_format, bg="#A2D9CE", padx=10, pady=10, width=50)
 ota_format_btn.grid(column=0, row=2, padx=30, pady=30)
 
 ps_format_btn = Button()
-ps_format_btn.config(text="Personal Safety", command=open_ps_format, bg="#A2D9CE", padx=10, pady=10)
+ps_format_btn.config(text="Personal Safety", command=open_ps_format, bg="#A2D9CE", padx=10, pady=10, width=50)
 ps_format_btn.grid(column=0, row=3, padx=30, pady=30)
 
-delete_label = Label(text="Delete's all previously formatted files.", font=("Arial", 12, "normal"), fg="white", bg="#A2D9CE")
+delete_label = Label(text="Delete's all previously formatted files.", font=("Arial", 12, "normal"), fg="white", bg="#48C9B0", highlightthickness=0)
 delete_label.grid(column=0, row=5)
 
 delete_btn = Button()
