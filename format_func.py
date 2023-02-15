@@ -155,9 +155,10 @@ def create_formatted(csv_files, brand):
             ]
         ]
             
+    # Sort list by case type
+    master_df = master_df.sort_values(by=['Type'])
+    # Drop duplicates
     master_df = master_df.drop_duplicates(subset="Review ID", keep="first")
-    
     # Final document to CSV
     master_df.to_csv(f"./uploads/{brand}_UPLOAD_{dt.today()}.csv", index=False, encoding='utf-8-sig')
     
-  
