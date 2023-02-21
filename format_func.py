@@ -4,8 +4,12 @@ from datetime import datetime, date as dt
 from categories import ota_cat_dict as ota_cat, cat_dict as cat
 
 def date_format(od):
-    date_str = re.search(r"\d{2}/\d{2}/\d{4}", od)
-    res = datetime.strptime(date_str.group(), "%d/%m/%Y").date()
+    if re.search(r"\d{2}/\d{2}/\d{4}", od) == None:
+        date_str = re.search(r"\d{1}/\d{2}/\d{2}", od)
+        res = datetime.strptime(date_str.group(), "%x").date()
+    else:
+        date_str = re.search(r"\d{2}/\d{2}/\d{4}", od)
+        res = datetime.strptime(date_str.group(), "%d/%m/%Y").date()
     return (f"{res.strftime('%m/%d/%Y')}T01:00:00.000GMT")
 
 def create_unformatted(csv_files, brand):
