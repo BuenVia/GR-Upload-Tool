@@ -41,7 +41,7 @@ def delete_file():
                     try:
                         os.remove(f)
                     except:
-                        messagebox.showerror(title="Error", message="There was an error, please trye again.")
+                        messagebox.showerror(title="Error", message="There was an error, please try again.")
                     else:
                         messagebox.showinfo(title="Success", message="Successfully deleted.")
     except PermissionError as err:

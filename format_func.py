@@ -88,7 +88,8 @@ def create_formatted(csv_files, brand):
             data["Status"] = ["Closed" if secCat == "Drug Activity-Other" or secCat == "Theft" else "Pending - Internal" for secCat in data["Secondary Category"]]
             data["Blocker"] = ["" if secCat == "Drug Activity-Other" or secCat == "Theft" else "Awaiting Internal Team" for secCat in data["Secondary Category"]]
             data["Resolution Type"] = ["Not Processed" if secCat == "Drug Activity-Other" or secCat == "Theft" else "" for secCat in data["Secondary Category"]]
-            data["Resolution Outcome"] = ["No investigation required" if secCat == "Drug Activity-Other" or secCat == "" else "Awaiting Internal Team" for secCat in data["Secondary Category"]]
+            data["Resolution Outcome"] = ["No investigation required" if secCat == "Drug Activity-Other" or secCat == "Theft" else "" for secCat in data["Secondary Category"]]
+            data["Language"] = "English"
         
         dfs.append(data)
     
@@ -155,7 +156,7 @@ def create_formatted(csv_files, brand):
                 "Review ID", "Review Submission Date Time", "Account ID", "TPID", 
                 "Primary Category", "Secondary Category", "Subject", "Description",
                 "Owner ID", "Record Type ID", "Type", "Status", "Blocker","Resolution Type", 
-                "Resolution Outcome", "Contact Name", "Case Category", "Case Origin", "Translated Description"
+                "Resolution Outcome", "Contact Name", "Case Category", "Case Origin", "Language"
             ]
         ]
             
