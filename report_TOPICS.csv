@@ -1,0 +1,27 @@
+﻿"Topic = ""H&S VRBO Model - REF"">>Topic = ""Pool Chlorinated Water"""
+Date exported: 20/02/23
+Exported by user: mclifford@expediagroup.com
+Classification: H&S VRBO Model - REF
+Report type: Topics Volume Report
+Project: Expedia
+Date range: from 05/02/23 to 19/02/23
+Date filter: 06/02/2023 - 19/02/2023
+Topic path: H&S VRBO Model - REF-->Pool Chlorinated Water
+Sentiment Filter: All sentences
+Matched: 3 sentences
+"Pool Chlorinated Water Rule #1: [ LEVEL:SENTENCE TYPE:KEYWORD {_catRef:[model:""H&S VRBO Model - Dutch"" path:""root"" node:""Pool Chlorinated Water""], _catRef:[model:""H&S VRBO Model - English"" path:""root"" node:""Pool Chlorinated Water""], _catRef:[model:""H&S VRBO Model - French"" path:""root"" node:""Pool Chlorinated Water""], _catRef:[model:""H&S VRBO Model - German"" path:""root"" node:""Pool Chlorinated Water""], _catRef:[model:""H&S VRBO Model - Italian"" path:""root"" node:""Pool Chlorinated Water""], _catRef:[model:""H&S VRBO Model - Japanese"" path:""root"" node:""Pool Chlorinated Water""], _catRef:[model:""H&S VRBO Model - Portuguese"" path:""root"" node:""Pool Chlorinated Water""], _catRef:[model:""H&S VRBO Model - Portuguese (Brazil)"" path:""root"" node:""Pool Chlorinated Water""], _catRef:[model:""H&S VRBO Model - Swedish"" path:""root"" node:""Pool Chlorinated Water""], _catRef:[model:""H&S VRBO Model - Spanish"" path:""root"" node:""Pool Chlorinated Water""], _catRef:[model:""H&S VRBO Model - Danish"" path:""root"" node:""Pool Chlorinated Water""], }]"
+"H&S VRBO Model - REF Rule #2: [ LEVEL:SENTENCE TYPE:KEYWORD {HR_TSPID:""83""}] [ LEVEL:SENTENCE TYPE:AND_KEYWORD {_language:dutch, _language:english, _language:french, _language:german, _language:italian, _language:japanese, _language:portuguese, _language:portuguese(brazil), _language:spanish, _language:swedish, _language:danish, _languagedetected:danish, _language:""greek (modern)""}]"
+NaturalId,SentenceId,Source,ADM_EXPEDIAHOTELID,CB Date of Creation,Document Date,HA_HOTELNAME,HR_DISPLAYLOCALE,HR_TSPID,REVIEW_TITLE,Sentence,VerbatimType,Verbatim
+63ea9aa26ed69757118b01f9,8183474940,NOT SPECIFIED,39935776,1676322027676,13/02/2023 20:16:32 CST,feel-good luxury oasis for 2-20 people in the eifel near prüm,de_de,83,sauberes großes modernes haus,"Lediglich im Whirlpool war zuviel Chlor, die Augen waren ziemlich gereizt dadurch.",HR_REVIEWTEXT,"Wir waren mit 8 Personen in dem Haus und es wäre noch mehr Platz gewesen. Alles war sehr sauber und modern. Die Umgebung ist super für Wanderungen jeglicher Art. Man kann dort in Ruhe entspannen. Lediglich im Whirlpool war zuviel Chlor, die Augen waren ziemlich gereizt dadurch. Da sollte nochmal drüber geschaut werden. Ansonsten wirklich alles perfekt! Vielen Dank!"
+63ee91423f8da11c96162557,8183721148,NOT SPECIFIED,70434772,1676579149423,16/02/2023 20:25:38 CST,"private hot tub, walk to base, main street restaurants, shopping, on free bus route!",en_us,83,amazing unit in an amazing location,The hot tub and pool needed a good cleaning and had waay too much chlorine that will ruin clothing and cause your skin to itch.,HR_REVIEWTEXT,"This unit has a large 2 car garage that can fit 2 SUVs. 
+
+There is a boot heater in the garage. Super nice for skiers.
+
+The 2 king master suites are huge, and come with their own fireplaces.
+
+The kitchen has a full supply of very nice appliances, cookware and silverware.
+
+The hot tub and pool needed a good cleaning and had waay too much chlorine that will ruin clothing and cause your skin to itch.
+
+The water pressure and temperature in the showers were not great."
+63dff29101a87329097f620c,8181871199,NOT SPECIFIED,23777178,1675621051722,05/02/2023 18:16:49 CST,restful  and quaint cottage,en_us,83,cottage review,"But the hot tub had too much chlorine, which caused a rash on the both of us.",HR_REVIEWTEXT,"The cottage was the perfect place for us to stay for a weekend getaway. And it was so cute. But the hot tub had too much chlorine, which caused a rash on the both of us."
