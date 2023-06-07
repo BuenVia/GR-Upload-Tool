@@ -3,6 +3,7 @@ import pandas as pd
 from datetime import datetime, date as dt
 from categories import ota_cat_dict as ota_cat, cat_dict as cat
 
+# Formats date to string format required for dataloader
 def date_format(od):
     if re.search(r"\d{2}/\d{2}/\d{4}", od) == None:
         date_str = re.search(r"\d{1}/\d{2}/\d{2}", od)
@@ -12,19 +13,24 @@ def date_format(od):
         res = datetime.strptime(date_str.group(), "%d/%m/%Y").date()
     return (f"{res.strftime('%m/%d/%Y')}T01:00:00.000GMT")
 
+# Gets header row index
+def get_header_row(file):
+    data = pd.read_csv(file, on_bad_lines='skip')
+    return len(data) + 1
+
 def create_unformatted(csv_files, brand):
     master_df = pd.DataFrame()
     dfs = []
 
     for f in csv_files:
+        
         # Finds the topic in row 8
         pc_item = pd.read_csv(f, nrows=8)
         pc = pc_item.iat[7, 0]
-        # Pulls all data from header row - row is different for each brand
-        if brand == "ota" or brand == "vrbo":
-            df = pd.read_csv(f, skiprows=13)
-        elif brand == "ps":
-            df = pd.read_csv(f, skiprows=38)
+        
+        # Reads the csv file, starting from row defined by get_header_row()
+        index = get_header_row(f)
+        df = pd.read_csv(f, skiprows=index)
         new_data = pd.DataFrame(df)
         
         if brand == "ota":
