@@ -2,7 +2,7 @@ cat_dict = {
     
         "Balcony":
             {
-            "primCat": "Balcony",
+            "primCat": "Balcony/Deck/Porch",
             "secCat": ""    
             },
         "Fire":
@@ -27,12 +27,12 @@ cat_dict = {
             },
         "Customer":
             {
-            "primCat": "Customer",
+            "primCat": "Illness Outbreak",
             "secCat": ""    
             },
         "Food Safety":
             {
-            "primCat": "Food Safety",
+            "primCat": "Food",
             "secCat": ""    
             },
         "Force Majeure":
@@ -42,12 +42,12 @@ cat_dict = {
             },
         "Injury":
             {
-            "primCat": "Injury",
+            "primCat": "Accommodation",
             "secCat": ""    
             },
         "Lifts":
             {
-            "primCat": "Lifts",
+            "primCat": "Lift/Elevator",
             "secCat": ""    
             },
         "Pool Safety":
@@ -62,7 +62,7 @@ cat_dict = {
             },
         "Stairs":
             {
-            "primCat": "Stairs",
+            "primCat": "Stairway",
             "secCat": ""    
             },
         "Window":
@@ -72,8 +72,8 @@ cat_dict = {
             },
         "Fatality":
             {
-            "primCat": "Fatality",
-            "secCat": ""    
+            "primCat": "Customer L1",
+            "secCat": "Fatality"    
             },
         "Electrical - Power Outage": 
             {
@@ -158,32 +158,99 @@ ota_cat_dict = {
     "Fire2": "Fire",
     "Gas": "Gas",
     "Gas2": "Gas",
-    "Balcony": "Balcony",
-    "Balcony2": "Balcony",
-    "Injury": "Injury",
-    "Injury2": "Injury",
-    "Customer": "Customer",
-    "Customer2": "Customer",
+    "Balcony": "Balcony/Deck/Porch",
+    "Balcony2": "Balcony/Deck/Porch",
+    "Injury": "Accommodation",
+    "Injury2": "Accommodation",
+    "Customer": "Illness Outbreak",
+    "Customer2": "Illness Outbreak",
     "Accommodation": "Accommodation",
     "Accommodation2": "Accommodation",
     "Electrical": "Electrical",
     "Electrical2": "Electrical",
-    "Food Safety": "Food Safety",
-    "Food Safety2": "Food Safety",
-    "Pool Safety": "pPool Safety",
+    "Food Safety": "Food",
+    "Food Safety2": "Food",
+    "Pool Safety": "Pool Safety",
     "Pool Safety2": "Pool Safety",
     "Child": "Child",
     "Child2": "Child",
-    "Lifts": "Lifts",
-    "Lifts2": "Lifts",
+    "Lifts": "Lift/Elevator",
+    "Lifts2": "Lift/Elevator",
     "Force Majeure": "Force Majeure",
     "Force Majeure2": "Force Majeure",
     "Pest-Control": "Pest-Control",
     "Pest-Control2": "Pest-Control",
-    "Transport/Excursions": "Transport/Excursions",
-    "Transport/Excursions2": "Transport/Excursions",
+    "Transport/Excursions": "Transport",
+    "Transport/Excursions2": "Transport",
     "Beach Safety": "Beach Safety",
     "Beach Safety2": "Beach Safety",
-    "Fatality": "Fatality",
-    "Fatality2": "Fatality",
+    "Fatality": "Customer L1",
+    "Fatality2": "Customer L1",
 }
+
+# ps_cat_dict = {
+#     "Discrimination - Other": "Customer L2",
+#     "Discrimination - Race": "Customer L2",
+#     "Discrimination - Racial Abuse by staff": "Customer L2",
+#     "Discrimination - Religion": "Customer L2",
+#     "Discrimination - Sexual Orientation": "Customer L2",
+#     "Drug Activity-Other": "Customer L3",
+#     "Drug Making": "Customer L3",
+#     "Drug Selling by staff": "Customer L3",
+#     "Drugs Smell": "Customer L3",
+#     "Drug Use by staff": "Customer L3",
+#     "Hidden cameras/peep holes": "Customer L2",
+#     "Human Trafficking": "Customer L1",
+#     "Kidnapping": "Customer L1",
+#     "Physical Assault - General": "Customer L1",
+#     "Physical Assault - With Weapon/Injury": "Customer L1",
+#     "Sexual Assault-Child Abuse": "Customer L1",
+#     "Sexual Harassment": "Customer L1",
+#     "Sexual Assault - Indecent Exposure (hoteliers)": "Customer L1",
+#     "Sexual Assault-Rape": "Customer L1",
+#     "Theft": "Customer L3",
+#     "Prostitution": "Customer L2",
+# }
+
+# ps_cat_dict = {
+#     "Drug Activity-Other": "Customer L3",
+#     "Drug Making": "Customer L3",
+#     "Drug Selling by staff": "Customer L3",
+#     "Drugs Smell": "Customer L3",
+#     "Drug Use by staff": "Customer L3",
+#     "Human Trafficking": "Customer L1",
+#     "Indecent Exposure by staff": "Customer L1",
+#     "Kidnapping": "Customer L1",
+#     "Physical Assault-General": "Customer L1",
+#     "Physical Assault-Weapon": "Customer L1",
+#     "Sexual Assault-Child Abuse": "Customer L1",
+#     "Sexual Assault-Rape": "Customer L1",
+#     "Sexual Harassment": "Customer L1",
+#     "Theft": "Customer L3",
+#     "Prostitution": "Customer L2"
+# }
+
+# tpid_codes = {
+#     "de_de": 6,
+#     'en_au': 25,
+#     'en_ca': 4,
+#     'en_gb': 3,
+#     'en_ie': 63,
+#     'en_us': 1,
+#     'es_co': 0,
+#     'es_es': 9,
+#     'es_mx': 12,
+#     'es_us': 1,
+#     'fr_ca': 4,
+#     'fr_fr': 20,
+#     'it_it': 8,
+#     'ja_jp': 28,
+#     'ko_kr': 16,
+#     'nl_nl': 11,
+#     'pt_br': 69,
+#     'pt_pt': 0,
+#     'sv_se': 10,
+#     'tr_tr': 0,
+#     'zh_hk': 18,
+#     'zh_tw': 62
+# }
