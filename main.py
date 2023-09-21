@@ -1,97 +1,79 @@
 from tkinter import *
-from tkinter import messagebox, filedialog
-import os, glob
+from tkcalendar import Calendar, DateEntry
+from datetime import datetime
+import os
+import babel.numbers
 
-from format_func import create_unformatted, create_formatted
+from review_finder import ReviewFinder
 
-"""
-First part of the program returns the unformatted csv with the raw data extracted from SalesForce.
-Second part of the program formats the data ready for DataLoader.
-"""
+review_finder = ReviewFinder()
 
-def open_vrbo_files():
-    csv_files = filedialog.askopenfilenames()
-    create_unformatted(csv_files, "vrbo")
-    create_formatted(csv_files, "vrbo")  
-    show_files()
+# From date formatting function
+def get_from_date(date_str):
+    x = datetime.strptime(date_str.get(), "%d/%m/%Y")
+    unix = round(datetime.timestamp(x) * 1000)
+    return unix
 
-def open_ota_format():
-    csv_files = filedialog.askopenfilenames()
-    create_unformatted(csv_files, "ota")
-    create_formatted(csv_files, "ota")
-    show_files()
-    
-def open_ps_format():
-    csv_files = filedialog.askopenfilenames()
-    create_unformatted(csv_files, "ps")
-    create_formatted(csv_files, "ps")
-    show_files()
+# To date formatting function (adds on 86399 seconds to return time of 23:59:59)
+def get_to_date(date_str):
+    x = datetime.strptime(date_str.get(), "%d/%m/%Y")
+    end_of_day = datetime.timestamp(x) + 86399
+    unix = round(end_of_day * 1000) 
+    return str(unix)
 
-def delete_file():
-    try:
-        is_delete = messagebox.askokcancel(title="Delete", message="You are about to delete all formatted files.")
-        if is_delete:   
-            path = os.getcwd()
-            csv_files = glob.glob(os.path.join(path, "./uploads/*.csv"))
-            if len(csv_files) < 1:
-                messagebox.showinfo(title="Empty", message="The folder is empty.")
-                return
-            else:
-                for f in csv_files:
-                    try:
-                        os.remove(f)
-                    except:
-                        messagebox.showerror(title="Error", message="There was an error, please try again.")
-                    else:
-                        messagebox.showinfo(title="Success", message="Successfully deleted.")
-    except PermissionError as err:
-        messagebox.showerror(title="Error", message=f"{err}\n\nPLEASE CLOSE THE SPREADHSEET THEN TRY AGAIN...")
-        
+def core_ota():
+    fr = get_from_date(from_date)
+    to = get_to_date(to_date)
+    review_finder.call_sentences("Health and Safety - Ref", fr, to, info_label)
+
+def vrbo():
+    fr = get_from_date(from_date)
+    to = get_to_date(to_date)
+    review_finder.call_sentences("H&S VRBO Model - REF", fr, to, info_label)
+
 def show_files():
     path = "./uploads/"
     path = os.path.realpath(path)
     os.startfile(path)
-
+        
+# GUI
 window = Tk()
-window.minsize(80, 80)
-window.title("Upload Tool")
-window.config(padx=50, pady=50, bg="#48C9B0")
+window.title("Guest Review Export and Upload")
+window.config(padx=50, pady=50, bg="#ddd")
 
-title_label = Label(text="GR Formatter", font=("Courier", 24, "bold"), fg="white", bg="#48C9B0", highlightthickness=0)
-title_label.grid(column=0, row=0)
+title_label = Label(text="Guest Review Export and Upload", font=("Courier", 24, "bold"), fg="#999", highlightthickness=0)
+title_label.grid(column=0, row=0, columnspan=2, padx=10, pady=10)
 
-vrbo_format_btn = Button()
-vrbo_format_btn.config(text="VRBO", command=open_vrbo_files, bg="#A2D9CE", padx=10, pady=10, width=50)
-vrbo_format_btn.grid(column=0, row=1, padx=30, pady=30)
+step_one_label = Label(text="1. Choose Date Range", font=("Courier", 18, "bold"))
+step_one_label.grid(column=0, row=1)
 
-ota_format_btn = Button()
-ota_format_btn.config(text="OTA", command=open_ota_format, bg="#A2D9CE", padx=10, pady=10, width=50)
-ota_format_btn.grid(column=0, row=2, padx=30, pady=30)
+from_label = Label(text="From")
+from_label.grid(column=0, row=2, padx=10, pady=10)
 
-ps_format_btn = Button()
-ps_format_btn.config(text="Personal Safety", command=open_ps_format, bg="#A2D9CE", padx=10, pady=10, width=50)
-ps_format_btn.grid(column=0, row=3, padx=30, pady=30)
+to_label = Label(text="To")
+to_label.grid(column=1, row=2, padx=10, pady=10)
 
-delete_label = Label(text="Delete's all previously formatted files.", font=("Arial", 12, "normal"), fg="white", bg="#48C9B0", highlightthickness=0)
-delete_label.grid(column=0, row=5)
+from_date = DateEntry(locale="en_GB")
+from_date.grid(column=0, row=3, padx=10, pady=10)
 
-delete_btn = Button()
-delete_btn.config(text="DELETE", command=delete_file, bg="Red")
-delete_btn.grid(column=0, row=6, padx=30, pady=10)
+to_date = DateEntry(locale="en_GB")
+to_date.grid(column=1, row=3, padx=10, pady=10)
+
+step_two_label = Label(text="2. Choose Project", font=("Courier", 18, "bold"))
+step_two_label.grid(column=0, row=4)
+
+core_ota_btn = Button(text="Core OTA", command=core_ota)
+core_ota_btn.grid(column=0, row=5, padx=10, pady=10)
+
+vrbo_btn = Button(text="VRBO", command=vrbo)
+vrbo_btn.grid(column=1, row=5, padx=10, pady=10)
+
+info_label = Label()
+info_label.grid(column=0, row=7)
 
 open_directory_btn = Button()
-open_directory_btn.config(text="Show Files", command=show_files, bg="#A2D9CE")
-open_directory_btn.grid(column=0, row=4, padx=30, pady=30)
-
-# TODO Build out Core OTA
-# TODO Select files
-# TODO Delete button for the Upload files + export files
-# TODO Build out Personal Safety
-# ======
-# TODO Build out Activities
-# TODO Dupe Check
-# TODO Translation funciontality
-# TODO Error message(s)
+open_directory_btn.config(text="Directory", command=show_files, bg="#A2D9CE")
+open_directory_btn.grid(column=0, row=8, padx=30, pady=30)
 
 
 window.mainloop()
