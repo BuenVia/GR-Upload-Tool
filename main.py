@@ -4,11 +4,11 @@ from datetime import datetime
 import os
 import babel.numbers
 
+# Calls the ReviewFinder class
 from review_finder import ReviewFinder
-
 review_finder = ReviewFinder()
 
-# From date formatting function
+# From date formatting function converts date to UNIX
 def get_from_date(date_str):
     x = datetime.strptime(date_str.get(), "%d/%m/%Y")
     unix = round(datetime.timestamp(x) * 1000)
@@ -21,6 +21,7 @@ def get_to_date(date_str):
     unix = round(end_of_day * 1000) 
     return str(unix)
 
+# Passes either Core OTA or VRBO data to ReviewFinder class
 def core_ota():
     fr = get_from_date(from_date)
     to = get_to_date(to_date)
@@ -31,6 +32,7 @@ def vrbo():
     to = get_to_date(to_date)
     review_finder.call_sentences("H&S VRBO Model - REF", fr, to, info_label)
 
+# To allowe user to open the file directory
 def show_files():
     path = "./uploads/"
     path = os.path.realpath(path)

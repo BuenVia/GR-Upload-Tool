@@ -4,16 +4,15 @@ from tkinter import *
 from format_csv import FormatCsv
 from dotenv import load_dotenv, dotenv_values
 
+# Env Varaiables
 load_dotenv()
 config = dotenv_values(".env")
 
-# URL for XMD API 
-# ENDPOINT = "https://export-na.clarabridge.net/api/v2/export/sentences"
+# URL for API 
 ENDPOINT = "http://localhost:9000/api"
 
-# Reference to API keys
+# Reference to API keys - not necessary for demo version
 header = { "Authorization": f"Bearer {config['API_KEY_ENV']}" }
-# lx_header = { "Authorization": f"Bearer {config['LX_API_KEY_ENV']}" }
 
 # Class that calls reviews via API call and then calls the full verbatim for each review before putting it in to a list. The list is then passed to the FormatCsv class.
 class ReviewFinder:
@@ -24,9 +23,6 @@ class ReviewFinder:
         self.total = 0
         self.processed = 0
         self.scroll_id = ""
-        
-    def show_message(self, info_label, msg, clr):
-        info_label.config(text=msg, bg=clr)
     
     # API call to get reviews
     def call_sentences(self, model, start_date, end_date, info_label):
@@ -39,10 +35,8 @@ class ReviewFinder:
             "scroll_id": self.scroll_id
         }
         
-        if model == "H&S VRBO Model - REF" or model == "Health and Safety - Ref": #or model == "H&S Personal Safety - Ref":
+        if model == "H&S VRBO Model - REF" or model == "Health and Safety - Ref":
             self.response = requests.get(url=ENDPOINT, headers=header, params=self.parameters)
-        # if model == "LX H&S - Ref":
-        #     self.response = requests.get(url=ENDPOINT, headers=lx_header, params=self.parameters)
         self.data = self.response.json()
         self.total = self.data["total_count"]
         self.handler(self.data, model, start_date, end_date, info_label)
@@ -56,6 +50,10 @@ class ReviewFinder:
         #     self.call_sentences(model, start_date, end_date, info_label)
         # else:
         self.format_review(self.data_list, model, info_label, start_date)
+        
+    # Display process data on the GUI        
+    def show_message(self, info_label, msg, clr):
+        info_label.config(text=msg, bg=clr)
 
     # Show the number completed in the terminal
     def show_processed(self):
@@ -63,27 +61,6 @@ class ReviewFinder:
         print(f"Completed: {self.processed} of {self.total}")
         return f"Completed: {self.processed} of {self.total}"
 
-    # Sorts the full verbatim
-    def sort_verbatim(self, sentence):
-        return sentence["sentence_start_pos"]
-    
-    # API call to get all text for a specific review
-    # def call_verbatim(self, review_id):
-    #     self.verbatim_parameters = {
-    #         "query": f"natural_id:{review_id}",
-    #         "fields": "all"
-    #     }
-    #     self.verbatim_response = requests.get(url=ENDPOINT, headers=header, params=self.verbatim_parameters)
-    #     self.verbatim_data = self.verbatim_response.json()['sentences']
-    #     self.verbatim_data.sort(key=self.sort_verbatim)
-
-    #     full_verbatim = [sentence['sentence'] for sentence in self.verbatim_data]
-    #     return " ".join(full_verbatim)
-
-    def show_files(self):
-        path = "./uploads/"
-        path = os.path.realpath(path)
-        os.startfile(path)
 
     # Format the data
     def format_review(self, data_list, model, info_label, start_date):
@@ -114,3 +91,25 @@ class ReviewFinder:
             self.show_message(info_label, "", "white")
             return
 
+    # Sorts the full verbatim
+    # def sort_verbatim(self, sentence):
+    #     return sentence["sentence_start_pos"]
+    
+    # API call to get all text for a specific review
+    # def call_verbatim(self, review_id):
+    #     self.verbatim_parameters = {
+    #         "query": f"natural_id:{review_id}",
+    #         "fields": "all"
+    #     }
+    #     self.verbatim_response = requests.get(url=ENDPOINT, headers=header, params=self.verbatim_parameters)
+    #     self.verbatim_data = self.verbatim_response.json()['sentences']
+    #     self.verbatim_data.sort(key=self.sort_verbatim)
+
+    #     full_verbatim = [sentence['sentence'] for sentence in self.verbatim_data]
+    #     return " ".join(full_verbatim)
+
+    # Once both the review_finder and format_csv stages have completed, the directory folder opens
+    def show_files(self):
+        path = "./uploads/"
+        path = os.path.realpath(path)
+        os.startfile(path)
